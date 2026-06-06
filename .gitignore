@@ -9,3 +9,4 @@ training_logs/
 *.bin
 *.safetensors
 data
+Archive/
