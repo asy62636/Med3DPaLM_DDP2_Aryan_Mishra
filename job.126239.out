@@ -1,0 +1,27 @@
+Running on host: cn18-dgx
+Starting job at: Sunday 31 May 2026 07:04:38 PM IST
+Sun May 31 19:04:38 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:B7:00.0 Off |                    0 |
+| N/A   34C    P0             66W /  400W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+=== Exp3 Stage3: Open-ended VQA ===
+Open-ended done at: Sunday 31 May 2026 10:10:29 PM IST
+=== Exp3 Stage3: Closed-ended VQA ===
+Closed-ended done at: Sunday 31 May 2026 10:27:22 PM IST
+Job finished at: Sunday 31 May 2026 10:27:22 PM IST

@@ -1,0 +1,155 @@
+{
+  "train": [
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/Axial_non_contrast.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_RCA.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_OM1.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/Axial_non_contrast.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/Sagittal_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/Axial_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/3D_Heart.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/Coronal_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/Axial_C__portal_venous_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Axial_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/Axial_Mono_40_overlay.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_PDA.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Short_axis_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/Sagittal_bone_window.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_CX.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/Axial_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/Coronal_bone_window.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/Axial_C__delayed.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/Axial_non_contrast.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/Axial_MonoE_55.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/Axial_C__portal_venous_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/Coronal_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/Axial_bone_window.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000010/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/Axial_Iodine_no_Water___overlay__VNC.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Vertical_long_axis_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/Axial_C__delayed.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/Axial_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/3D_Vessels.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000006/Axial_non_contrast.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000006/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/Sagittal_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/Axial_Z_effective.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/Axial_C__arterial_phase.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000007/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_OM2.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/Axial_MonoE_40.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000009/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/Curved_LAD.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    },
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/3D_Cardiac_chambers.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_case/000008/text.txt"
+    }
+  ],
+  "validation": [
+    {
+      "image": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000007/Axial_non_contrast.nii.gz",
+      "text": "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/data/M3D_Cap_npy/ct_quizze/000007/text.txt"
+    }
+  ],
+  "test": []
+}

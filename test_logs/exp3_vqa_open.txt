@@ -1,0 +1,517 @@
+=== Exp 3: Open-ended VQA ===
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bleu/9e0985c1200e367cce45605ce0ecb5ede079894e0f24f54613fca08eeb8aff76 (last modified on Thu Sep 18 10:04:06 2025) since it couldn't be found locally at evaluate-metric--bleu, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bertscore/cf4907b18f8f741f202232c0f8009a3bd49ff98802c245abcb6ea51a37a8c05b (last modified on Thu Sep 18 10:04:12 2025) since it couldn't be found locally at evaluate-metric--bertscore, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--meteor/e7ed321a1b44c34fa4679192809db2cee7e3bd4bba0fe8b76061d807706c2374 (last modified on Thu Sep 18 10:04:17 2025) since it couldn't be found locally at evaluate-metric--meteor, or remotely on the Hugging Face Hub.
+[nltk_data] Error loading wordnet: <urlopen error [Errno -3] Temporary
+[nltk_data]     failure in name resolution>
+[nltk_data] Error loading punkt_tab: <urlopen error [Errno -3]
+[nltk_data]     Temporary failure in name resolution>
+[nltk_data] Error loading omw-1.4: <urlopen error [Errno -3] Temporary
+[nltk_data]     failure in name resolution>
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--rouge/b01e0accf3bd6dd24839b769a5fda24e14995071570870922c71970b3a6ed886 (last modified on Thu Sep 18 10:04:20 2025) since it couldn't be found locally at evaluate-metric--rouge, or remotely on the Hugging Face Hub.
+Imports done
+Metrics loaded
+Device: cuda
+GPU: NVIDIA A100-SXM4-80GB
+============================================================
+Loading model from: ./output/exp3-dual-pargo-complete
+============================================================
+  Projector type : dual_scale_pargo
+  proj_out_num   : 288
+
+  Loading tokenizer...
+  Vocab size     : 151666
+  <im_patch> ID  : 151665
+
+  Loading model weights...
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:14<01:24, 14.06s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:26<01:05, 13.06s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:37<00:48, 12.15s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:47<00:34, 11.44s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:59<00:22, 11.44s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [01:08<00:10, 10.78s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:13<00:00,  8.73s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:13<00:00, 10.47s/it]
+Some weights of the model checkpoint at ./output/exp3-dual-pargo-complete were not used when initializing VLMQwenForCausalLM: {'model.mm_projector.low_branch.bert.encoder.layer.1.intermediate.dense.bias', 'model.mm_projector.low_output_proj.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.value.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.intermediate.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.value.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.output.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.value.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.query.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.output.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.key.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.embeddings.LayerNorm.bias', 'model.mm_projector.low_branch.bert.pooler.dense.bias', 'model.mm_projector.low_output_proj.weight', 'model.mm_projector.high_branch.self_attention_mask_layer_1', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.output.dense.weight', 'model.mm_projector.high_branch.global_queries', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.value.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.intermediate.dense.weight', 'model.mm_projector.high_branch.cross_attention_mask', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.output.dense.bias', 'model.mm_projector.high_output_proj.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.value.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.intermediate.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.key.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.value.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.key.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.query.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.query.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.key.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.value.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.output.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.output.LayerNorm.bias', 'model.mm_projector.high_output_proj.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.key.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.output.dense.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.query.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.key.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.value.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.output.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.output.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.key.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.value.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.output.LayerNorm.bias', 'model.mm_projector.low_branch.input_proj.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.output.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.output.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.query.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.value.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.key.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.value.weight', 'model.mm_projector.high_branch.bert.embeddings.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.output.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.embeddings.word_embeddings.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.output.dense.weight', 'model.mm_projector.high_branch.bert.embeddings.word_embeddings.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.output.LayerNorm.weight', 'model.mm_projector.low_branch.cross_attention_mask', 'model.mm_projector.low_branch.global_queries', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.output.LayerNorm.bias', 'model.mm_projector.low_branch.self_attention_mask_layer_0', 'model.mm_projector.high_branch.bert.pooler.dense.weight', 'model.mm_projector.low_branch.self_attention_mask_layer_1', 'model.mm_projector.high_branch.partial_queries', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.query.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.embeddings.token_type_embeddings.weight', 'model.mm_projector.high_branch.self_attention_mask_layer_0', 'model.mm_projector.low_branch.bert.embeddings.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.output.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'model.mm_projector.high_branch.bert.embeddings.token_type_embeddings.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.key.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.query.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.query.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.value.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.output.LayerNorm.weight', 'model.mm_projector.low_branch.partial_queries', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.output.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.output.dense.weight', 'model.mm_projector.low_branch.input_proj.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.query.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.output.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.intermediate.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.intermediate.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.output.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.value.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.output.dense.bias', 'model.mm_projector.low_branch.bert.embeddings.position_embeddings.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.output.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.output.LayerNorm.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.output.dense.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.key.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.output.LayerNorm.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.query.weight', 'model.mm_projector.low_branch.bert.pooler.dense.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.key.bias', 'model.mm_projector.high_branch.bert.pooler.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.output.dense.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.query.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.value.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.value.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.value.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.intermediate.dense.weight', 'model.mm_projector.high_branch.bert.embeddings.position_embeddings.weight', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.output.dense.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.output.dense.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.output.LayerNorm.weight', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.query.weight', 'model.mm_projector.high_branch.bert.embeddings.LayerNorm.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.attention.self.key.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.intermediate.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.output.dense.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.output.LayerNorm.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.crossattention.self.query.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.output.LayerNorm.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.crossattention.self.key.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.attention.self.key.bias', 'model.mm_projector.low_branch.bert.encoder.layer.1.attention.self.query.weight', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.query.bias', 'model.mm_projector.high_branch.bert.encoder.layer.0.attention.self.query.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.self.key.bias', 'model.mm_projector.high_branch.bert.encoder.layer.1.crossattention.output.dense.weight', 'model.mm_projector.low_branch.bert.encoder.layer.0.crossattention.self.key.weight'}
+- This IS expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.1.crossattention.output.dense.bias', 'bert.encoder.layer.1.crossattention.output.dense.weight', 'bert.encoder.layer.1.crossattention.self.key.bias', 'bert.encoder.layer.1.crossattention.self.key.weight', 'bert.encoder.layer.1.crossattention.self.query.bias', 'bert.encoder.layer.1.crossattention.self.query.weight', 'bert.encoder.layer.1.crossattention.self.value.bias', 'bert.encoder.layer.1.crossattention.self.value.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of BertModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.1.crossattention.output.dense.bias', 'bert.encoder.layer.1.crossattention.output.dense.weight', 'bert.encoder.layer.1.crossattention.self.key.bias', 'bert.encoder.layer.1.crossattention.self.key.weight', 'bert.encoder.layer.1.crossattention.self.query.bias', 'bert.encoder.layer.1.crossattention.self.query.weight', 'bert.encoder.layer.1.crossattention.self.value.bias', 'bert.encoder.layer.1.crossattention.self.value.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+  mm_projector keys in state_dict: 0
+
+  Projector not auto-loaded — initializing vision modules...
+
+  Moving vision modules to cuda:0 (torch.float16)...
+  ✓ mm_projector moved
+  ✓ vision_tower moved
+
+  Loading projector & vision tower weights from safetensors...
+  ✓ Projector: loaded 134/134 weights
+  ✓ Vision tower: loaded 426/426 weights
+
+  ✓ Model ready | projector: dual_scale_pargo | tokens: 288
+============================================================
+
+Loading VQA test dataset...
+Test samples: 100
+
+============================================================
+EVALUATING OPEN-ENDED VQA
+============================================================
+Open-Ended:   0%|          | 0/100 [00:00<?, ?it/s]/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Open-Ended:   1%|          | 1/100 [00:55<1:31:02, 55.17s/it]Open-Ended:   2%|▏         | 2/100 [00:56<38:29, 23.57s/it]  Open-Ended:   3%|▎         | 3/100 [00:57<21:28, 13.28s/it]Open-Ended:   4%|▍         | 4/100 [00:58<13:10,  8.24s/it]Open-Ended:   5%|▌         | 5/100 [00:59<08:53,  5.61s/it]Open-Ended:   6%|▌         | 6/100 [00:59<06:07,  3.91s/it]Open-Ended:   7%|▋         | 7/100 [01:01<04:53,  3.15s/it]Open-Ended:   8%|▊         | 8/100 [01:01<03:35,  2.35s/it]Open-Ended:   9%|▉         | 9/100 [01:02<02:45,  1.82s/it]Open-Ended:  10%|█         | 10/100 [01:03<02:08,  1.43s/it]Open-Ended:  11%|█         | 11/100 [01:04<02:00,  1.35s/it]Open-Ended:  12%|█▏        | 12/100 [01:04<01:38,  1.11s/it]Open-Ended:  13%|█▎        | 13/100 [01:05<01:20,  1.08it/s]Open-Ended:  14%|█▍        | 14/100 [01:06<01:36,  1.12s/it]Open-Ended:  15%|█▌        | 15/100 [01:08<01:52,  1.32s/it]Open-Ended:  16%|█▌        | 16/100 [01:10<02:05,  1.49s/it]Open-Ended:  17%|█▋        | 17/100 [01:11<01:50,  1.33s/it]Open-Ended:  18%|█▊        | 18/100 [01:12<01:28,  1.08s/it]Open-Ended:  19%|█▉        | 19/100 [01:13<01:24,  1.04s/it]Open-Ended:  20%|██        | 20/100 [01:13<01:11,  1.11it/s]Open-Ended:  21%|██        | 21/100 [01:14<01:12,  1.09it/s]Open-Ended:  22%|██▏       | 22/100 [01:16<01:31,  1.17s/it]Open-Ended:  23%|██▎       | 23/100 [01:18<01:44,  1.36s/it]Open-Ended:  24%|██▍       | 24/100 [01:19<01:46,  1.40s/it]Open-Ended:  25%|██▌       | 25/100 [01:20<01:25,  1.15s/it]Open-Ended:  26%|██▌       | 26/100 [01:20<01:10,  1.05it/s]Open-Ended:  27%|██▋       | 27/100 [01:21<00:58,  1.24it/s]Open-Ended:  28%|██▊       | 28/100 [01:21<00:52,  1.37it/s]Open-Ended:  29%|██▉       | 29/100 [01:22<00:54,  1.31it/s]Open-Ended:  30%|███       | 30/100 [01:24<01:11,  1.02s/it]Open-Ended:  31%|███       | 31/100 [01:24<01:03,  1.09it/s]Open-Ended:  32%|███▏      | 32/100 [01:25<00:58,  1.16it/s]Open-Ended:  33%|███▎      | 33/100 [01:26<01:00,  1.11it/s]Open-Ended:  34%|███▍      | 34/100 [01:27<00:53,  1.24it/s]Open-Ended:  35%|███▌      | 35/100 [01:28<01:08,  1.05s/it]Open-Ended:  36%|███▌      | 36/100 [01:30<01:14,  1.16s/it]Open-Ended:  37%|███▋      | 37/100 [01:32<01:28,  1.40s/it]Open-Ended:  38%|███▊      | 38/100 [01:33<01:17,  1.25s/it]Open-Ended:  39%|███▉      | 39/100 [01:33<01:07,  1.10s/it]Open-Ended:  40%|████      | 40/100 [01:34<00:59,  1.01it/s]Open-Ended:  41%|████      | 41/100 [01:35<00:49,  1.19it/s]Open-Ended:  42%|████▏     | 42/100 [01:36<01:08,  1.18s/it]Open-Ended:  43%|████▎     | 43/100 [01:37<01:01,  1.07s/it]Open-Ended:  44%|████▍     | 44/100 [01:38<00:51,  1.10it/s]Open-Ended:  45%|████▌     | 45/100 [01:38<00:42,  1.30it/s]Open-Ended:  46%|████▌     | 46/100 [01:39<00:40,  1.33it/s]Open-Ended:  47%|████▋     | 47/100 [01:39<00:35,  1.50it/s]Open-Ended:  48%|████▊     | 48/100 [01:40<00:35,  1.46it/s]Open-Ended:  49%|████▉     | 49/100 [01:41<00:32,  1.58it/s]Open-Ended:  50%|█████     | 50/100 [01:43<00:51,  1.03s/it]Open-Ended:  51%|█████     | 51/100 [01:44<00:58,  1.19s/it]Open-Ended:  52%|█████▏    | 52/100 [01:46<01:04,  1.34s/it]Open-Ended:  53%|█████▎    | 53/100 [01:46<00:51,  1.09s/it]Open-Ended:  54%|█████▍    | 54/100 [01:47<00:44,  1.03it/s]Open-Ended:  55%|█████▌    | 55/100 [01:48<00:38,  1.18it/s]Open-Ended:  56%|█████▌    | 56/100 [01:49<00:48,  1.10s/it]Open-Ended:  57%|█████▋    | 57/100 [01:51<00:52,  1.22s/it]Open-Ended:  58%|█████▊    | 58/100 [01:51<00:42,  1.01s/it]Open-Ended:  59%|█████▉    | 59/100 [01:52<00:35,  1.17it/s]Open-Ended:  60%|██████    | 60/100 [01:52<00:29,  1.35it/s]Open-Ended:  61%|██████    | 61/100 [01:54<00:34,  1.12it/s]Open-Ended:  62%|██████▏   | 62/100 [01:54<00:29,  1.28it/s]Open-Ended:  63%|██████▎   | 63/100 [01:56<00:38,  1.05s/it]Open-Ended:  64%|██████▍   | 64/100 [01:58<00:44,  1.24s/it]Open-Ended:  65%|██████▌   | 65/100 [01:59<00:41,  1.17s/it]Open-Ended:  66%|██████▌   | 66/100 [01:59<00:32,  1.04it/s]Open-Ended:  67%|██████▋   | 67/100 [02:00<00:27,  1.20it/s]Open-Ended:  68%|██████▊   | 68/100 [02:00<00:26,  1.22it/s]Open-Ended:  69%|██████▉   | 69/100 [02:01<00:27,  1.14it/s]Open-Ended:  70%|███████   | 70/100 [02:02<00:28,  1.06it/s]Open-Ended:  71%|███████   | 71/100 [02:04<00:35,  1.23s/it]Open-Ended:  72%|███████▏  | 72/100 [02:07<00:45,  1.61s/it]Open-Ended:  73%|███████▎  | 73/100 [02:08<00:38,  1.41s/it]Open-Ended:  74%|███████▍  | 74/100 [02:08<00:31,  1.20s/it]Open-Ended:  75%|███████▌  | 75/100 [02:09<00:28,  1.12s/it]Open-Ended:  76%|███████▌  | 76/100 [02:10<00:22,  1.07it/s]Open-Ended:  77%|███████▋  | 77/100 [02:11<00:22,  1.02it/s]Open-Ended:  78%|███████▊  | 78/100 [02:13<00:25,  1.16s/it]Open-Ended:  79%|███████▉  | 79/100 [02:14<00:26,  1.27s/it]Open-Ended:  80%|████████  | 80/100 [02:16<00:27,  1.38s/it]Open-Ended:  81%|████████  | 81/100 [02:16<00:22,  1.19s/it]Open-Ended:  82%|████████▏ | 82/100 [02:17<00:17,  1.01it/s]Open-Ended:  83%|████████▎ | 83/100 [02:18<00:14,  1.18it/s]Open-Ended:  84%|████████▍ | 84/100 [02:18<00:12,  1.28it/s]Open-Ended:  85%|████████▌ | 85/100 [02:19<00:11,  1.30it/s]Open-Ended:  86%|████████▌ | 86/100 [02:20<00:14,  1.01s/it]Open-Ended:  87%|████████▋ | 87/100 [02:22<00:16,  1.24s/it]Open-Ended:  88%|████████▊ | 88/100 [02:24<00:15,  1.31s/it]Open-Ended:  89%|████████▉ | 89/100 [02:25<00:13,  1.25s/it]Open-Ended:  90%|█████████ | 90/100 [02:26<00:10,  1.09s/it]Open-Ended:  91%|█████████ | 91/100 [02:26<00:09,  1.04s/it]Open-Ended:  92%|█████████▏| 92/100 [02:27<00:07,  1.07it/s]Open-Ended:  93%|█████████▎| 93/100 [02:28<00:06,  1.02it/s]Open-Ended:  94%|█████████▍| 94/100 [02:30<00:07,  1.21s/it]Open-Ended:  95%|█████████▌| 95/100 [02:31<00:06,  1.30s/it]Open-Ended:  96%|█████████▌| 96/100 [02:33<00:05,  1.38s/it]Open-Ended:  97%|█████████▋| 97/100 [02:34<00:03,  1.17s/it]Open-Ended:  98%|█████████▊| 98/100 [02:34<00:02,  1.04s/it]Open-Ended:  99%|█████████▉| 99/100 [02:35<00:00,  1.15it/s]Open-Ended: 100%|██████████| 100/100 [02:36<00:00,  1.24it/s]Open-Ended: 100%|██████████| 100/100 [02:36<00:00,  1.56s/it]
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 307, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+
+  Sample 0:
+  Q: <im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch>
+  GT: Left lower quadrant
+  Pred:  Right lower quadrant
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 310, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 312, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 308, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 301, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 307, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 306, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 309, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 307, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 295, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 295, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 306, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 306, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 308, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 307, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 308, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 301, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 301, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 309, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 301, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 306, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 307, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 299, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 295, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 311, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 296, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 295, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 298, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 297, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 306, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 303, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 302, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 304, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 305, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+[MULTIMODAL] Image features shape: torch.Size([1, 288, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 288
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 300, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+
+============================================================
+OPEN-ENDED VQA SCORES BY TYPE:
+============================================================
+
+  Plane:
+    BLEU        : 0.9286
+    ROUGE1      : 0.9286
+    METEOR      : 0.4643
+    BERT_F1     : 0.9894
+
+  Phase:
+    BLEU        : 0.6905
+    ROUGE1      : 0.7000
+    METEOR      : 0.6274
+    BERT_F1     : 0.9472
+
+  Organ:
+    BLEU        : 0.4667
+    ROUGE1      : 0.5111
+    METEOR      : 0.3413
+    BERT_F1     : 0.9140
+
+  Abnormality:
+    BLEU        : 0.1362
+    ROUGE1      : 0.1630
+    METEOR      : 0.1263
+    BERT_F1     : 0.8621
+
+  Location:
+    BLEU        : 0.0843
+    ROUGE1      : 0.1230
+    METEOR      : 0.0852
+    BERT_F1     : 0.8421
+
+  Overall:
+    BLEU        : 0.3634
+    ROUGE1      : 0.3892
+    METEOR      : 0.2674
+    BERT_F1     : 0.8954
+============================================================
+
+  Results CSV    : ./output/eval_exp3_vqa/open/eval_open_vqa.csv
+  Summary JSON   : ./output/eval_exp3_vqa/open/eval_open_vqa_summary.json
+
+Evaluation complete!

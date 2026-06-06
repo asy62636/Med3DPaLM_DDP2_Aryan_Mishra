@@ -1,0 +1,165 @@
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bleu/9e0985c1200e367cce45605ce0ecb5ede079894e0f24f54613fca08eeb8aff76 (last modified on Thu Sep 18 10:04:06 2025) since it couldn't be found locally at evaluate-metric--bleu, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bertscore/cf4907b18f8f741f202232c0f8009a3bd49ff98802c245abcb6ea51a37a8c05b (last modified on Thu Sep 18 10:04:12 2025) since it couldn't be found locally at evaluate-metric--bertscore, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--meteor/e7ed321a1b44c34fa4679192809db2cee7e3bd4bba0fe8b76061d807706c2374 (last modified on Thu Sep 18 10:04:17 2025) since it couldn't be found locally at evaluate-metric--meteor, or remotely on the Hugging Face Hub.
+[nltk_data] Error loading wordnet: <urlopen error [Errno -3] Temporary
+[nltk_data]     failure in name resolution>
+[nltk_data] Error loading punkt_tab: <urlopen error [Errno -3]
+[nltk_data]     Temporary failure in name resolution>
+[nltk_data] Error loading omw-1.4: <urlopen error [Errno -3] Temporary
+[nltk_data]     failure in name resolution>
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--rouge/b01e0accf3bd6dd24839b769a5fda24e14995071570870922c71970b3a6ed886 (last modified on Thu Sep 18 10:04:20 2025) since it couldn't be found locally at evaluate-metric--rouge, or remotely on the Hugging Face Hub.
+Imports done
+Metrics loaded
+Device: cuda
+GPU: NVIDIA A100-SXM4-80GB
+============================================================
+Loading complete model from: ./output/exp2-single-pargo-complete
+============================================================
+  Projector type: single_scale_pargo
+  proj_out_num: 32
+
+  Loading tokenizer...
+  Vocab size: 151666
+  <im_patch> ID: 151665
+
+  Loading model weights...
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:12<01:13, 12.29s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:21<00:52, 10.41s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:31<00:40, 10.06s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:40<00:29,  9.87s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:52<00:20, 10.45s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [01:04<00:11, 11.26s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:13<00:00, 10.51s/it]Loading checkpoint shards: 100%|██████████| 7/7 [01:13<00:00, 10.56s/it]
+Some weights of the model checkpoint at ./output/exp2-single-pargo-complete were not used when initializing VLMQwenForCausalLM: {'model.mm_projector.partial_queries', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.value.weight', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.key.weight', 'model.mm_projector.bert.encoder.layer.0.output.dense.weight', 'model.mm_projector.bert.encoder.layer.1.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.0.intermediate.dense.bias', 'model.mm_projector.bert.encoder.layer.0.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.1.attention.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.1.output.dense.bias', 'model.mm_projector.bert.embeddings.position_embeddings.weight', 'model.mm_projector.bert.encoder.layer.1.attention.self.value.weight', 'model.mm_projector.bert.embeddings.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.0.attention.self.query.bias', 'model.mm_projector.bert.encoder.layer.0.crossattention.output.dense.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.output.dense.bias', 'model.mm_projector.bert.encoder.layer.1.attention.self.key.weight', 'model.mm_projector.bert.encoder.layer.0.attention.self.key.bias', 'model.mm_projector.bert.encoder.layer.0.attention.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.0.attention.self.value.weight', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.key.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.0.attention.output.dense.bias', 'model.mm_projector.output_proj.weight', 'model.mm_projector.output_proj.bias', 'model.mm_projector.bert.encoder.layer.1.output.dense.weight', 'model.mm_projector.bert.encoder.layer.0.intermediate.dense.weight', 'model.mm_projector.bert.encoder.layer.1.attention.self.key.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.output.dense.weight', 'model.mm_projector.bert.encoder.layer.1.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.0.attention.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.query.bias', 'model.mm_projector.bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.0.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.value.weight', 'model.mm_projector.bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.query.weight', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.query.bias', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.value.bias', 'model.mm_projector.bert.encoder.layer.0.attention.output.dense.weight', 'model.mm_projector.bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.value.bias', 'model.mm_projector.bert.embeddings.token_type_embeddings.weight', 'model.mm_projector.bert.encoder.layer.0.output.dense.bias', 'model.mm_projector.bert.encoder.layer.0.attention.self.key.weight', 'model.mm_projector.self_attention_mask_layer_1', 'model.mm_projector.bert.pooler.dense.bias', 'model.mm_projector.bert.encoder.layer.0.crossattention.output.dense.weight', 'model.mm_projector.cross_attention_mask', 'model.mm_projector.bert.encoder.layer.1.attention.self.value.bias', 'model.mm_projector.bert.encoder.layer.0.crossattention.self.query.weight', 'model.mm_projector.bert.encoder.layer.1.intermediate.dense.bias', 'model.mm_projector.bert.encoder.layer.1.attention.output.dense.weight', 'model.mm_projector.bert.pooler.dense.weight', 'model.mm_projector.bert.encoder.layer.1.attention.output.dense.bias', 'model.mm_projector.bert.embeddings.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.1.attention.output.LayerNorm.weight', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.key.weight', 'model.mm_projector.bert.encoder.layer.1.intermediate.dense.weight', 'model.mm_projector.global_queries', 'model.mm_projector.self_attention_mask_layer_0', 'model.mm_projector.bert.encoder.layer.0.attention.self.value.bias', 'model.mm_projector.bert.encoder.layer.1.attention.self.query.bias', 'model.mm_projector.bert.encoder.layer.1.attention.self.query.weight', 'model.mm_projector.bert.embeddings.word_embeddings.weight', 'model.mm_projector.bert.encoder.layer.1.crossattention.self.key.bias', 'model.mm_projector.bert.encoder.layer.0.attention.self.query.weight'}
+- This IS expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.1.crossattention.output.dense.bias', 'bert.encoder.layer.1.crossattention.output.dense.weight', 'bert.encoder.layer.1.crossattention.self.key.bias', 'bert.encoder.layer.1.crossattention.self.key.weight', 'bert.encoder.layer.1.crossattention.self.query.bias', 'bert.encoder.layer.1.crossattention.self.query.weight', 'bert.encoder.layer.1.crossattention.self.value.bias', 'bert.encoder.layer.1.crossattention.self.value.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+  Projector not auto-loaded — initializing vision modules...
+============================================================
+Initializing Single-Scale ParGo Projector (Experiment 2)
+============================================================
+  vision_hidden_size : 768
+  llm_hidden_size    : 3584
+  num_global_queries : 8
+  num_partial_queries: 24
+  num_layers         : 2
+  proj_out_num       : 32
+  use_pretrained_bert: True
+============================================================
+
+  Moving vision modules to cuda:0 (dtype=torch.float16)...
+  ✓ mm_projector moved to cuda:0
+  ✓ vision_tower moved to cuda:0
+
+  Loading projector & vision tower weights from safetensors...
+  Found 66 mm_projector params in safetensors
+  Found 426 vision_tower params in safetensors
+  ✓ Loaded 66 projector weights
+  ✓ Loaded 426 vision tower weights
+
+  ✓ Model ready for evaluation
+    Projector type: single_scale_pargo
+    Output tokens: 32
+============================================================
+
+Loading test dataset...
+HELP=================================  ./data/M3D_Cap_npy/M3D_Cap.json
+Test dataset: 100 samples
+Evaluating:   0%|          | 0/100 [00:00<?, ?it/s]/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Traceback (most recent call last):
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/src/eval/eval_caption.py", line 513, in main
+    generation = model.generate(**gen_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/src/model/llm/qwen.py", line 112, in generate
+    output_ids = super().generate(inputs_embeds=inputs_embeds, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/utils.py", line 2255, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/generation/utils.py", line 3254, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/src/model/llm/qwen.py", line 73, in forward
+    return super().forward(
+           ^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 819, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 577, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 259, in forward
+    hidden_states, self_attn_weights = self.self_attn(
+                                       ^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 191, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py", line 62, in sdpa_attention_forward
+    attn_output = attn_output.transpose(1, 2).contiguous()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: uncorrectable ECC error encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Evaluating:   1%|          | 1/100 [01:39<2:44:49, 99.89s/it]Evaluating:   1%|          | 1/100 [01:40<2:45:42, 100.43s/it]
+[MULTIMODAL] Image features shape: torch.Size([1, 32, 3584])
+[MULTIMODAL] Input embeds will have image tokens at positions 1 to 32
+[MULTIMODAL] Final inputs_embeds shape: torch.Size([1, 41, 3584])
+[MULTIMODAL] Image features successfully inserted into sequence
+  [ERROR] Sample 0: generation failed: CUDA error: uncorrectable ECC error encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+  --- Sample 0 ---
+  Q: <im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch><im_patch>
+  GT: Streak artefact from left total hip replacement.Moderate right hydronephrosis and hydroureter to the
+  Pred: [Generation Error]
+  BLEU=0.000 ROUGE=0.000 METEOR=0.000 BERT=0.772
+Traceback (most recent call last):
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/src/eval/eval_caption.py", line 597, in <module>
+    main()
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/src/eval/eval_caption.py", line 479, in main
+    input_ids = tok_out["input_ids"].to(device)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: uncorrectable ECC error encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

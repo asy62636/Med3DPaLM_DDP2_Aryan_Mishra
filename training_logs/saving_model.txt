@@ -1,0 +1,130 @@
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+================================================================================
+SAVE COMPLETE MODEL — Experiment 2: Single-Scale ParGo
+================================================================================
+
+[1/9] Configuration
+  Base checkpoint: /home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/output/exp2-single-pargo/stage2/checkpoint-97944
+  Output directory: ./output/exp2-single-pargo-complete
+  ✓ Checkpoint directory exists
+    ✓ config.json
+  ✓ Found 4 safetensor files
+
+[2/9] Loading tokenizer...
+  Loading from: Qwen/Qwen2.5-7B-Instruct
+  Added <im_patch> special token
+  ✓ Tokenizer loaded successfully
+  Vocabulary size: 151666
+  Special token <im_patch> ID: 151665
+
+[3/9] Setting up model arguments...
+  ✓ Model arguments configured
+  Projector type: single_scale_pargo
+  proj_out_num: 32
+
+[4/9] Loading base Qwen model from HuggingFace...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [01:04<03:13, 64.49s/it]Loading checkpoint shards:  50%|█████     | 2/4 [02:52<03:00, 90.02s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [04:48<01:42, 102.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [05:54<00:00, 87.78s/it] Loading checkpoint shards: 100%|██████████| 4/4 [05:54<00:00, 88.68s/it]
+Some weights of BertModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.1.crossattention.output.dense.bias', 'bert.encoder.layer.1.crossattention.output.dense.weight', 'bert.encoder.layer.1.crossattention.self.key.bias', 'bert.encoder.layer.1.crossattention.self.key.weight', 'bert.encoder.layer.1.crossattention.self.query.bias', 'bert.encoder.layer.1.crossattention.self.query.weight', 'bert.encoder.layer.1.crossattention.self.value.bias', 'bert.encoder.layer.1.crossattention.self.value.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  ✓ Base Qwen model loaded
+
+  Pre-setting config attributes for projector builder...
+  ✓ Config attributes set
+
+[5/9] Initializing vision modules...
+============================================================
+Initializing Single-Scale ParGo Projector (Experiment 2)
+============================================================
+  vision_hidden_size : 768
+  llm_hidden_size    : 3584
+  num_global_queries : 8
+  num_partial_queries: 24
+  num_layers         : 2
+  proj_out_num       : 32
+  use_pretrained_bert: True
+============================================================
+  ✓ Vision modules initialized
+  ✓ Vision tokenizer initialized
+  ✓ Token embeddings resized: 151666 → 151666
+
+[6/9] Loading checkpoint from safetensors...
+  Found 4 safetensor shards:
+    [1/4] Loading model-00001-of-00004.safetensors...
+         → Loaded 104 parameters from this shard
+    [2/4] Loading model-00002-of-00004.safetensors...
+         → Loaded 122 parameters from this shard
+    [3/4] Loading model-00003-of-00004.safetensors...
+         → Loaded 604 parameters from this shard
+    [4/4] Loading model-00004-of-00004.safetensors...
+         → Loaded 1 parameters from this shard
+  ✓ Total parameters loaded from checkpoint: 831
+
+  Sample parameter keys:
+    - model.embed_tokens.weight: shape torch.Size([151666, 3584])
+    - model.layers.0.input_layernorm.weight: shape torch.Size([3584])
+    - model.layers.0.mlp.down_proj.weight: shape torch.Size([3584, 18944])
+    - model.layers.0.mlp.gate_proj.weight: shape torch.Size([18944, 3584])
+    - model.layers.0.mlp.up_proj.weight: shape torch.Size([18944, 3584])
+
+  Parameter key prefixes in checkpoint:
+    model.vision_tower.vision_tower: 426 params
+    model.mm_projector.bert: 59 params
+    model.layers.0: 12 params
+    model.layers.1: 12 params
+    model.layers.2: 12 params
+    model.layers.3: 12 params
+    model.layers.4: 12 params
+    model.layers.5: 12 params
+    model.layers.6: 12 params
+    model.layers.7: 12 params
+    model.layers.8: 12 params
+    model.layers.10: 12 params
+    model.layers.11: 12 params
+    model.layers.12: 12 params
+    model.layers.13: 12 params
+
+[7/9] Loading checkpoint weights into model...
+  Model has 831 parameters
+  Attempting to load 831 parameters from checkpoint...
+  Loading state dict into model...
+
+============================================================
+WEIGHT LOADING SUMMARY:
+  ✓ Successfully loaded: 831 parameters
+  ⚠ Shape mismatches: 0
+  ⚠ Not in model: 0
+============================================================
+
+[8/9] Fixing shared tensors in BERT...
+  ℹ No BERT cls.predictions found
+  ✓ Cloned BERT word embeddings to break potential ties
+
+[9/9] Saving complete model...
+  Output directory: ./output/exp2-single-pargo-complete
+  ✓ Config saved
+  Saving model weights in safetensors format...
+  (This may take a few minutes...)
+[2026-03-07 13:47:24,399] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+  ✓ Model weights saved
+  ✓ Tokenizer saved
+
+  Verifying saved files...
+
+================================================================================
+FINAL VERIFICATION:
+  ✓ Created 7 safetensor files
+    - model-00006-of-00007.safetensors: 3738.87 MB
+    - model-00003-of-00007.safetensors: 4704.23 MB
+    - model-00005-of-00007.safetensors: 4767.28 MB
+    - model-00007-of-00007.safetensors: 2073.56 MB
+    - model-00004-of-00007.safetensors: 4704.23 MB
+    - model-00002-of-00007.safetensors: 4557.25 MB
+    - model-00001-of-00007.safetensors: 4740.70 MB
+  ✓ Total model size: 30.71 GB
+  ✓ Config: True
+  ✓ Tokenizer: True
+
+✓✓✓ COMPLETE MODEL SAVED SUCCESSFULLY! ✓✓✓
+Output: /home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/output/exp2-single-pargo-complete
+================================================================================
+

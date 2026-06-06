@@ -1,0 +1,81 @@
+You are using a model of type qwen2 to instantiate a model of type vlm_qwen. This is not supported for all configurations of models and can yield errors.
+================================================================================
+MERGE LORA + SAVE COMPLETE MODEL — Experiment 2: Single-Scale ParGo
+================================================================================
+
+[1/8] Validating checkpoint...
+  ✓ adapter_model.safetensors
+  ✓ adapter_config.json
+  ✓ zero_to_fp32.py
+  ✓ ZeRO shard dir: global_step150985
+
+[2/8] Extracting trainable weights from ZeRO shards...
+  ✓ zero_to_fp32 output already exists, skipping
+  Loading extracted weights...
+  ✓ Loaded 886 parameters from zero_to_fp32
+  Top key prefixes:
+    base_model.model.model: 885
+    base_model.model.lm_head: 1
+
+[3/8] Loading tokenizer...
+  ✓ Tokenizer loaded | vocab: 151666 | <im_patch>: 151665
+
+[4/8] Loading base Qwen2.5-7B-Instruct...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:15<00:47, 15.87s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:30<00:30, 15.09s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:47<00:16, 16.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:01<00:00, 15.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:01<00:00, 15.38s/it]
+Some weights of BertModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.1.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.1.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.1.crossattention.output.dense.bias', 'bert.encoder.layer.1.crossattention.output.dense.weight', 'bert.encoder.layer.1.crossattention.self.key.bias', 'bert.encoder.layer.1.crossattention.self.key.weight', 'bert.encoder.layer.1.crossattention.self.query.bias', 'bert.encoder.layer.1.crossattention.self.query.weight', 'bert.encoder.layer.1.crossattention.self.value.bias', 'bert.encoder.layer.1.crossattention.self.value.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  ✓ Base Qwen loaded
+
+  Initializing vision modules...
+============================================================
+Initializing Single-Scale ParGo Projector (Experiment 2)
+============================================================
+  vision_hidden_size : 768
+  llm_hidden_size    : 3584
+  num_global_queries : 8
+  num_partial_queries: 24
+  num_layers         : 2
+  proj_out_num       : 32
+  use_pretrained_bert: True
+============================================================
+  ✓ Vision modules initialized
+
+[5/8] Applying LoRA adapters (matching training config)...
+trainable params: 40,370,176 || all params: 7,717,490,624 || trainable%: 0.5231
+  ✓ LoRA applied
+
+[6/8] Loading trainable weights (LoRA + projector + vision tower)...
+
+  Weight loading summary:
+    ✓ Loaded     : 886
+    ⚠ Mismatched : 0
+    ⚠ Skipped    : 0
+    Missing (not in zero ckpt): 0
+
+[7/8] Merging LoRA weights into LLM backbone...
+  ✓ LoRA merged and adapters unloaded
+  ✓ Fixed BERT shared tensors
+
+[8/8] Saving complete model to: ./output/exp2-single-pargo-stage3-complete
+  ✓ Config saved
+[2026-05-01 10:07:07,826] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+  ✓ Model weights saved
+  ✓ Tokenizer saved
+
+================================================================================
+FINAL VERIFICATION:
+  ✓ Safetensor shards : 7
+    - model-00001-of-00007.safetensors: 4.97 GB
+    - model-00002-of-00007.safetensors: 4.78 GB
+    - model-00003-of-00007.safetensors: 4.93 GB
+    - model-00004-of-00007.safetensors: 4.93 GB
+    - model-00005-of-00007.safetensors: 5.00 GB
+    - model-00006-of-00007.safetensors: 3.92 GB
+    - model-00007-of-00007.safetensors: 2.17 GB
+  ✓ Total size        : 30.71 GB
+  ✓ config.json       : True
+  ✓ tokenizer_config  : True
+
+✓✓✓ EXP 2 STAGE 3 COMPLETE MODEL SAVED! ✓✓✓
+Output: /home/medal/ankit_k/Med3DVLM_and_Pargo/experiments/output/exp2-single-pargo-stage3-complete
+================================================================================

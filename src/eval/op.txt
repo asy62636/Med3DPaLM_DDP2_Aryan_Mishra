@@ -1,0 +1,606 @@
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bleu/9e0985c1200e367cce45605ce0ecb5ede079894e0f24f54613fca08eeb8aff76 (last modified on Thu Sep 18 10:04:06 2025) since it couldn't be found locally at evaluate-metric--bleu, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--bertscore/cf4907b18f8f741f202232c0f8009a3bd49ff98802c245abcb6ea51a37a8c05b (last modified on Thu Sep 18 10:04:12 2025) since it couldn't be found locally at evaluate-metric--bertscore, or remotely on the Hugging Face Hub.
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--meteor/e7ed321a1b44c34fa4679192809db2cee7e3bd4bba0fe8b76061d807706c2374 (last modified on Thu Sep 18 10:04:17 2025) since it couldn't be found locally at evaluate-metric--meteor, or remotely on the Hugging Face Hub.
+[nltk_data] Error loading wordnet: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading punkt_tab: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading omw-1.4: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Using the latest cached version of the module from /home/medal/ankit_k/.cache/huggingface/modules/evaluate_modules/metrics/evaluate-metric--rouge/b01e0accf3bd6dd24839b769a5fda24e14995071570870922c71970b3a6ed886 (last modified on Thu Sep 18 10:04:20 2025) since it couldn't be found locally at evaluate-metric--rouge, or remotely on the Hugging Face Hub.
+metrics set
+Running on: cuda
+GPU: NVIDIA L40S
+Loading complete model from ./output/Med3DVLM-Qwen-2p5-7B-ParGo-Complete-Safe
+Loading model with all weights (this will take time)...
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:25<00:00,  3.65s/it]
+Some weights of the model checkpoint at ./output/Med3DVLM-Qwen-2p5-7B-ParGo-Complete-Safe were not used when initializing VLMQwenForCausalLM: {'model.mm_projector.bert.bert.encoder.layer.0.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.9.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.4.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.5.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.9.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.0.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.7.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.9.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.3.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.embeddings.position_ids', 'model.mm_projector.bert.bert.encoder.layer.3.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.7.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.10.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.6.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.2.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.0.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.1.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.9.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.3.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.0.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.8.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.3.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.1.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.11.output_query.LayerNorm.weight', 'model.mm_projector.query_tokens', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.3.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.6.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.9.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.3.output_query.LayerNorm.weight', 'model.mm_projector.bert.cls.predictions.decoder.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.9.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.9.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.7.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.4.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.8.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.3.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.9.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.6.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.10.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.10.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.2.intermediate.dense.bias', 'model.mm_projector.bert.cls.predictions.transform.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.1.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.value.bias', 'model.mm_projector.bert.bert.embeddings.position_embeddings.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.query.weight', 'model.mm_projector.bert.cls.predictions.transform.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.2.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.4.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.4.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.value.bias', 'model.mm_projector.bert.bert.embeddings.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.5.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.5.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.7.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.0.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.1.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.0.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.2.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.6.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.3.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.8.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.6.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.6.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.7.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.5.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.7.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.9.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.9.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.8.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.5.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.3.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.11.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.0.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.3.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.1.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.8.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.9.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.key.bias', 'model.mm_projector.bert.bert.embeddings.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.query.bias', 'model.mm_projector.bert.cls.predictions.transform.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.1.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.6.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.attention.output.LayerNorm.weight', 'model.mm_projector.bert.cls.predictions.bias', 'model.mm_projector.bert.bert.encoder.layer.8.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.1.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.6.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.11.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.9.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.output_query.LayerNorm.weight', 'model.mm_projector.output_proj.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.0.output.dense.weight', 'model.mm_projector.bert.cls.predictions.transform.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.11.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.8.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.1.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.0.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.6.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.10.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.5.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.7.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.query.bias', 'model.mm_projector.bert.cls.predictions.decoder.weight', 'model.mm_projector.bert.bert.encoder.layer.6.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.0.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.2.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.0.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.9.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.intermediate.dense.bias', 'model.mm_projector.vision_proj.bias', 'model.mm_projector.bert.bert.encoder.layer.3.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.10.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.value.weight', 'model.mm_projector.bert.bert.embeddings.word_embeddings.weight', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.4.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.8.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.8.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.0.attention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.6.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.10.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.output.dense.weight', 'model.mm_projector.output_proj.bias', 'model.mm_projector.bert.bert.encoder.layer.0.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.1.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.7.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.5.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.7.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.10.crossattention.self.key.weight', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.7.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.6.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.query.bias', 'model.mm_projector.bert.bert.encoder.layer.10.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.1.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.0.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.5.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.6.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.4.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.4.output_query.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.2.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.output_query.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.4.attention.self.key.bias', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.3.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.8.crossattention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.9.attention.self.value.weight', 'model.mm_projector.bert.bert.encoder.layer.10.output_query.dense.weight', 'model.mm_projector.vision_proj.weight', 'model.mm_projector.bert.bert.encoder.layer.7.attention.self.query.weight', 'model.mm_projector.bert.bert.encoder.layer.9.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.3.attention.output.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.0.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.3.attention.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.4.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.9.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.10.intermediate_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.2.output.LayerNorm.bias', 'model.mm_projector.bert.bert.encoder.layer.11.output_query.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.9.intermediate_query.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.2.attention.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.6.attention.output.LayerNorm.weight', 'model.mm_projector.bert.bert.encoder.layer.1.output.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.0.crossattention.self.value.bias', 'model.mm_projector.bert.bert.encoder.layer.8.intermediate.dense.bias', 'model.mm_projector.bert.bert.encoder.layer.4.intermediate.dense.weight', 'model.mm_projector.bert.bert.encoder.layer.4.crossattention.self.value.bias'}
+- This IS expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing VLMQwenForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+=== DIAGNOSTICS: mm_projector / model internals ===
+has mm_projector attr (get_model): True
+model.model.mm_projector: None
+type(mm_projector): <class 'NoneType'>
+callable(mm_projector): False
+model.config.mm_projector_type: pargo
+model.config keys (subset): ['_commit_hash', 'mm_hidden_size', 'mm_mlp_depth', 'mm_projector_type', 'proj_out_num', 'vision_hidden_size', 'vision_select_feature', 'vision_select_layer', 'vision_tower']
+Number of state_dict keys containing 'mm_projector': 0
+Example mm_projector keys: []
+=== END DIAGNOSTICS ===
+[ensure_mm_projector] mm_projector missing or None — attempting to initialize vision modules using model.config...
+BertLMHeadModel has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Some weights of BertLMHeadModel were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['bert.encoder.layer.0.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.0.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.0.crossattention.output.dense.bias', 'bert.encoder.layer.0.crossattention.output.dense.weight', 'bert.encoder.layer.0.crossattention.self.key.bias', 'bert.encoder.layer.0.crossattention.self.key.weight', 'bert.encoder.layer.0.crossattention.self.query.bias', 'bert.encoder.layer.0.crossattention.self.query.weight', 'bert.encoder.layer.0.crossattention.self.value.bias', 'bert.encoder.layer.0.crossattention.self.value.weight', 'bert.encoder.layer.0.intermediate_query.dense.bias', 'bert.encoder.layer.0.intermediate_query.dense.weight', 'bert.encoder.layer.0.output_query.LayerNorm.bias', 'bert.encoder.layer.0.output_query.LayerNorm.weight', 'bert.encoder.layer.0.output_query.dense.bias', 'bert.encoder.layer.0.output_query.dense.weight', 'bert.encoder.layer.1.intermediate_query.dense.bias', 'bert.encoder.layer.1.intermediate_query.dense.weight', 'bert.encoder.layer.1.output_query.LayerNorm.bias', 'bert.encoder.layer.1.output_query.LayerNorm.weight', 'bert.encoder.layer.1.output_query.dense.bias', 'bert.encoder.layer.1.output_query.dense.weight', 'bert.encoder.layer.10.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.10.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.10.crossattention.output.dense.bias', 'bert.encoder.layer.10.crossattention.output.dense.weight', 'bert.encoder.layer.10.crossattention.self.key.bias', 'bert.encoder.layer.10.crossattention.self.key.weight', 'bert.encoder.layer.10.crossattention.self.query.bias', 'bert.encoder.layer.10.crossattention.self.query.weight', 'bert.encoder.layer.10.crossattention.self.value.bias', 'bert.encoder.layer.10.crossattention.self.value.weight', 'bert.encoder.layer.10.intermediate_query.dense.bias', 'bert.encoder.layer.10.intermediate_query.dense.weight', 'bert.encoder.layer.10.output_query.LayerNorm.bias', 'bert.encoder.layer.10.output_query.LayerNorm.weight', 'bert.encoder.layer.10.output_query.dense.bias', 'bert.encoder.layer.10.output_query.dense.weight', 'bert.encoder.layer.11.intermediate_query.dense.bias', 'bert.encoder.layer.11.intermediate_query.dense.weight', 'bert.encoder.layer.11.output_query.LayerNorm.bias', 'bert.encoder.layer.11.output_query.LayerNorm.weight', 'bert.encoder.layer.11.output_query.dense.bias', 'bert.encoder.layer.11.output_query.dense.weight', 'bert.encoder.layer.2.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.2.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.2.crossattention.output.dense.bias', 'bert.encoder.layer.2.crossattention.output.dense.weight', 'bert.encoder.layer.2.crossattention.self.key.bias', 'bert.encoder.layer.2.crossattention.self.key.weight', 'bert.encoder.layer.2.crossattention.self.query.bias', 'bert.encoder.layer.2.crossattention.self.query.weight', 'bert.encoder.layer.2.crossattention.self.value.bias', 'bert.encoder.layer.2.crossattention.self.value.weight', 'bert.encoder.layer.2.intermediate_query.dense.bias', 'bert.encoder.layer.2.intermediate_query.dense.weight', 'bert.encoder.layer.2.output_query.LayerNorm.bias', 'bert.encoder.layer.2.output_query.LayerNorm.weight', 'bert.encoder.layer.2.output_query.dense.bias', 'bert.encoder.layer.2.output_query.dense.weight', 'bert.encoder.layer.3.intermediate_query.dense.bias', 'bert.encoder.layer.3.intermediate_query.dense.weight', 'bert.encoder.layer.3.output_query.LayerNorm.bias', 'bert.encoder.layer.3.output_query.LayerNorm.weight', 'bert.encoder.layer.3.output_query.dense.bias', 'bert.encoder.layer.3.output_query.dense.weight', 'bert.encoder.layer.4.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.4.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.4.crossattention.output.dense.bias', 'bert.encoder.layer.4.crossattention.output.dense.weight', 'bert.encoder.layer.4.crossattention.self.key.bias', 'bert.encoder.layer.4.crossattention.self.key.weight', 'bert.encoder.layer.4.crossattention.self.query.bias', 'bert.encoder.layer.4.crossattention.self.query.weight', 'bert.encoder.layer.4.crossattention.self.value.bias', 'bert.encoder.layer.4.crossattention.self.value.weight', 'bert.encoder.layer.4.intermediate_query.dense.bias', 'bert.encoder.layer.4.intermediate_query.dense.weight', 'bert.encoder.layer.4.output_query.LayerNorm.bias', 'bert.encoder.layer.4.output_query.LayerNorm.weight', 'bert.encoder.layer.4.output_query.dense.bias', 'bert.encoder.layer.4.output_query.dense.weight', 'bert.encoder.layer.5.intermediate_query.dense.bias', 'bert.encoder.layer.5.intermediate_query.dense.weight', 'bert.encoder.layer.5.output_query.LayerNorm.bias', 'bert.encoder.layer.5.output_query.LayerNorm.weight', 'bert.encoder.layer.5.output_query.dense.bias', 'bert.encoder.layer.5.output_query.dense.weight', 'bert.encoder.layer.6.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.6.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.6.crossattention.output.dense.bias', 'bert.encoder.layer.6.crossattention.output.dense.weight', 'bert.encoder.layer.6.crossattention.self.key.bias', 'bert.encoder.layer.6.crossattention.self.key.weight', 'bert.encoder.layer.6.crossattention.self.query.bias', 'bert.encoder.layer.6.crossattention.self.query.weight', 'bert.encoder.layer.6.crossattention.self.value.bias', 'bert.encoder.layer.6.crossattention.self.value.weight', 'bert.encoder.layer.6.intermediate_query.dense.bias', 'bert.encoder.layer.6.intermediate_query.dense.weight', 'bert.encoder.layer.6.output_query.LayerNorm.bias', 'bert.encoder.layer.6.output_query.LayerNorm.weight', 'bert.encoder.layer.6.output_query.dense.bias', 'bert.encoder.layer.6.output_query.dense.weight', 'bert.encoder.layer.7.intermediate_query.dense.bias', 'bert.encoder.layer.7.intermediate_query.dense.weight', 'bert.encoder.layer.7.output_query.LayerNorm.bias', 'bert.encoder.layer.7.output_query.LayerNorm.weight', 'bert.encoder.layer.7.output_query.dense.bias', 'bert.encoder.layer.7.output_query.dense.weight', 'bert.encoder.layer.8.crossattention.output.LayerNorm.bias', 'bert.encoder.layer.8.crossattention.output.LayerNorm.weight', 'bert.encoder.layer.8.crossattention.output.dense.bias', 'bert.encoder.layer.8.crossattention.output.dense.weight', 'bert.encoder.layer.8.crossattention.self.key.bias', 'bert.encoder.layer.8.crossattention.self.key.weight', 'bert.encoder.layer.8.crossattention.self.query.bias', 'bert.encoder.layer.8.crossattention.self.query.weight', 'bert.encoder.layer.8.crossattention.self.value.bias', 'bert.encoder.layer.8.crossattention.self.value.weight', 'bert.encoder.layer.8.intermediate_query.dense.bias', 'bert.encoder.layer.8.intermediate_query.dense.weight', 'bert.encoder.layer.8.output_query.LayerNorm.bias', 'bert.encoder.layer.8.output_query.LayerNorm.weight', 'bert.encoder.layer.8.output_query.dense.bias', 'bert.encoder.layer.8.output_query.dense.weight', 'bert.encoder.layer.9.intermediate_query.dense.bias', 'bert.encoder.layer.9.intermediate_query.dense.weight', 'bert.encoder.layer.9.output_query.LayerNorm.bias', 'bert.encoder.layer.9.output_query.LayerNorm.weight', 'bert.encoder.layer.9.output_query.dense.bias', 'bert.encoder.layer.9.output_query.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+[ensure_mm_projector] mm_projector after init: ParGoProjector(
+  (vision_proj): Linear(in_features=768, out_features=768, bias=True)
+  (output_proj): Linear(in_features=768, out_features=3584, bias=True)
+  (bert): BertLMHeadModel(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(151666, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (crossattention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (intermediate_query): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output_query): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (cls): BertOnlyMLMHead(
+      (predictions): BertLMPredictionHead(
+        (transform): BertPredictionHeadTransform(
+          (dense): Linear(in_features=768, out_features=768, bias=True)
+          (transform_act_fn): GELUActivation()
+          (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (decoder): Linear(in_features=768, out_features=151666, bias=True)
+      )
+    )
+  )
+)
+[ensure_mm_projector] callable: True
+[MAIN] mm_projector initialized successfully.
+MM projector exists: True
+Model ready. Entering evaluation...
+HELP=================================  ./data/M3D_Cap_npy/M3D_Cap_subset.json
+Test dataset has 5 samples
+Evaluating:   0%|                                                                                                                                   | 0/5 [00:00<?, ?it/s][DEBUG] Image dtype: torch.float16, Model dtype: torch.float16
+[IMG DIAG] before=(1, 1, 128, 256, 256), after=(1, 1, 128, 256, 256), adapt_msg=[OK] images shape matches vision tower (B,C,D,H,W)=torch.Size([1, 1, 128, 256, 256]), expected in_channels=1 (param: vision_tower.encoder.s0.0.0.c1.0.weight(64, 1, 7, 1, 1))
+[WARN] model.generate failed: 'NoneType' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/eval/eval_test.py", line 527, in main
+    generation = model.generate(**gen_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/llm/qwen.py", line 100, in generate
+    self.prepare_inputs_for_multimodal(
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/vlm_arch.py", line 292, in prepare_inputs_for_multimodal
+    if vision_tower is None or images is None or input_ids.shape[1] == 1:
+                                                 ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+[ERROR] Fallback inputs_embeds generation also failed: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+Traceback (most recent call last):
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/eval/eval_test.py", line 527, in main
+    generation = model.generate(**gen_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/llm/qwen.py", line 100, in generate
+    self.prepare_inputs_for_multimodal(
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/vlm_arch.py", line 292, in prepare_inputs_for_multimodal
+    if vision_tower is None or images is None or input_ids.shape[1] == 1:
+                                                 ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/eval/eval_test.py", line 546, in main
+    image_features = model.encode_images(images)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/vlm_arch.py", line 279, in encode_images
+    image_features = self.get_model().mm_projector(image_features)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/Med3DVLM_and_Pargo/Med3DVLM/src/model/projector/pargo.py", line 125, in forward
+    visual_features = self.vision_proj(visual_features)  # (B, N, bert_hidden)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/medal/ankit_k/anaconda3/envs/Med3DVLM/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
