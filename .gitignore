@@ -1,4 +1,11 @@
 data/
 output/
 output2/
+datasave_proj_ckpt/
+training_logs/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
 data
