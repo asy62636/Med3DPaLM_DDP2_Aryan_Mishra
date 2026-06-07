@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 530" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr-flow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1a4f8a"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#15803d"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0369a1"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="310" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a4f8a">DCFormer: Hierarchical Feature Pyramid</text>
+  <text x="310" y="46" text-anchor="middle" font-size="12" fill="#6b7280">3D Swin-UNETR — 5 progressive stages</text>
+
+  <!-- ═══ PYRAMID TRAPEZOIDS (center x = 310) ═══ -->
+  <!--
+    Stage 4 (top, wider):  top=100px (x=260-360), bottom=160px (x=230-390), y=60-130
+    Stage 3 (wider):       top=160px (x=230-390), bottom=240px (x=190-430), y=130-200  GREEN
+    Stage 2:               top=240px (x=190-430), bottom=320px (x=150-470), y=200-270
+    Stage 1:               top=320px (x=150-470), bottom=400px (x=110-510), y=270-340
+    Stage 0 (bottom):      top=400px (x=110-510), bottom=460px (x=80-540), y=340-410
+  -->
+  <!-- Stage 0 -->
+  <polygon points="110,340 510,340 540,410 80,410"  fill="#dbeafe" stroke="#1a4f8a" stroke-width="1.5"/>
+  <!-- Stage 1 -->
+  <polygon points="150,270 470,270 510,340 110,340"  fill="#dbeafe" stroke="#1a4f8a" stroke-width="1.5"/>
+  <!-- Stage 2 -->
+  <polygon points="190,200 430,200 470,270 150,270"  fill="#dbeafe" stroke="#1a4f8a" stroke-width="1.5"/>
+  <!-- Stage 3 — GREEN (low-level) -->
+  <polygon points="230,130 390,130 430,200 190,200"  fill="#dcfce7" stroke="#15803d" stroke-width="2.5"/>
+  <!-- Stage 4 — ORANGE (high-level, top) -->
+  <polygon points="260,60  360,60  390,130 230,130"  fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+
+  <!-- ═══ STAGE LABELS (larger fonts) ═══ -->
+  <!-- Stage 4: center y=95 -->
+  <text x="310" y="83"  text-anchor="middle" font-size="15" font-weight="bold" fill="#ea580c">Stage 4</text>
+  <text x="310" y="100" text-anchor="middle" font-size="13" fill="#374151">4×8×8  |  768D</text>
+  <text x="310" y="116" text-anchor="middle" font-size="11" fill="#ea580c">▲ high-level</text>
+
+  <!-- Stage 3: center y=165 -->
+  <text x="310" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803d">Stage 3</text>
+  <text x="310" y="169" text-anchor="middle" font-size="13" fill="#374151">8×16×16  |  384D</text>
+  <text x="310" y="186" text-anchor="middle" font-size="11" fill="#15803d">▲ low-level</text>
+
+  <!-- Stage 2: center y=235 -->
+  <text x="310" y="222" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a4f8a">Stage 2</text>
+  <text x="310" y="240" text-anchor="middle" font-size="12" fill="#374151">16×32×32  |  256D</text>
+
+  <!-- Stage 1: center y=305 -->
+  <text x="310" y="293" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a4f8a">Stage 1</text>
+  <text x="310" y="311" text-anchor="middle" font-size="12" fill="#374151">32×64×64  |  128D</text>
+
+  <!-- Stage 0: center y=375 -->
+  <text x="310" y="363" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a4f8a">Stage 0</text>
+  <text x="310" y="381" text-anchor="middle" font-size="12" fill="#374151">64×128×128  |  64D</text>
+
+  <!-- ═══ INPUT VOLUME BOX ═══ -->
+  <rect x="195" y="428" width="230" height="50" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+  <text x="310" y="449" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369a1">3D Volume Input</text>
+  <text x="310" y="466" text-anchor="middle" font-size="12" fill="#374151">1 × 128 × 256 × 256</text>
+  <line x1="310" y1="428" x2="310" y2="413" stroke="#0369a1" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- ═══ FEATURE FLOW ARROWS (left exterior, S0→S1→S2→S3→S4) ═══ -->
+  <!-- Continuous upward arrows showing encoding direction -->
+  <!-- S0 → S1 (crosses y=340 boundary) -->
+  <line x1="60" y1="395" x2="60" y2="348" stroke="#1a4f8a" stroke-width="2.5" marker-end="url(#arr-flow)"/>
+  <line x1="60" y1="348" x2="60" y2="325" stroke="#1a4f8a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"/>
+  <!-- S1 → S2 (crosses y=270) -->
+  <line x1="60" y1="325" x2="60" y2="278" stroke="#1a4f8a" stroke-width="2.5" marker-end="url(#arr-flow)"/>
+  <line x1="60" y1="278" x2="60" y2="255" stroke="#1a4f8a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"/>
+  <!-- S2 → S3 (crosses y=200) -->
+  <line x1="60" y1="255" x2="60" y2="208" stroke="#1a4f8a" stroke-width="2.5" marker-end="url(#arr-flow)"/>
+  <line x1="60" y1="208" x2="60" y2="185" stroke="#1a4f8a" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"/>
+  <!-- S3 → S4 (crosses y=130) -->
+  <line x1="60" y1="185" x2="60" y2="138" stroke="#1a4f8a" stroke-width="2.5" marker-end="url(#arr-flow)"/>
+
+  <!-- Vertical label for flow arrows -->
+  <text x="35" y="270" text-anchor="middle" font-size="10" fill="#6b7280" transform="rotate(-90 35 270)">Feature flow ↑</text>
+
+  <!-- ═══ EXIT ARROW: Stage 4 → High-Level box ═══ -->
+  <!-- Stage 4 right edge at y=90: x = 360 + 30*(90-60)/70 = 360 + 12.9 ≈ 373 -->
+  <line x1="373" y1="90" x2="457" y2="90" stroke="#ea580c" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <rect x="459" y="66" width="250" height="54" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="584" y="88"  text-anchor="middle" font-size="13" font-weight="bold" fill="#ea580c">High-Level Features</text>
+  <text x="584" y="107" text-anchor="middle" font-size="12" fill="#374151">32 tokens × 768D</text>
+  <rect x="459" y="125" width="250" height="22" rx="3" fill="#ea580c"/>
+  <text x="584" y="140" text-anchor="middle" font-size="11" fill="white">→ High-Level ParGo Branch</text>
+
+  <!-- ═══ EXIT ARROW: Stage 3 → Low-Level box ═══ -->
+  <!-- Stage 3 right edge at y=165: x = 390 + 40*(165-130)/70 = 390 + 20 = 410 -->
+  <line x1="410" y1="165" x2="457" y2="165" stroke="#15803d" stroke-width="2" marker-end="url(#arr-green)"/>
+  <rect x="459" y="150" width="250" height="54" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <text x="584" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">Low-Level Features</text>
+  <text x="584" y="191" text-anchor="middle" font-size="12" fill="#374151">256 tokens × 384D</text>
+  <rect x="459" y="209" width="250" height="22" rx="3" fill="#15803d"/>
+  <text x="584" y="224" text-anchor="middle" font-size="11" fill="white">→ Low-Level ParGo Branch</text>
+
+  <!-- ═══ FROZEN BADGE ═══ -->
+  <rect x="70" y="430" width="112" height="38" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="126" y="446" text-anchor="middle" font-size="11" font-weight="bold" fill="#475569">🔒 Frozen</text>
+  <text x="126" y="462" text-anchor="middle" font-size="10" fill="#475569">during training</text>
+</svg>

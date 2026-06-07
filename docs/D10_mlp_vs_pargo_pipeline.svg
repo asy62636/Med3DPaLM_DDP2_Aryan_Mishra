@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ INPUT IMAGE (rotated text) ═══ -->
+  <text x="12" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155" transform="rotate(-90, 12, 225)">Input Image</text>
+
+  <!-- ═══ DCFORMER ═══ -->
+  <rect x="28" y="108" width="52" height="195" rx="6" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="54" y="210" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a3412" transform="rotate(-90, 54, 210)">DCFormer</text>
+
+  <!-- S3 / S4 labels -->
+  <text x="88" y="100" font-size="7.5" fill="#475569">Low-Level</text>
+  <text x="88" y="110" font-size="7.5" fill="#475569">Features: S₃</text>
+  <text x="88" y="270" font-size="7.5" fill="#475569">High-Level</text>
+  <text x="88" y="280" font-size="7.5" fill="#475569">Features: S₄</text>
+
+  <!-- Arrows from DCFormer to rows -->
+  <path d="M 80 165 C 95 165, 100 82, 112 82" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 80 245 C 95 245, 100 200, 112 200" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- MLP-MIXER HYBRID (top section, orange dashed border)   -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="105" y="12" width="400" height="260" rx="8" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="305" y="30" text-anchor="middle" font-size="12" font-style="italic" fill="#9a3412">MLP-Mixer Hybrid</text>
+
+  <!-- ──── ROW 1: Low-Level Features (y_center=82) ──── -->
+
+  <!-- Token stack A -->
+  <rect x="116" y="60" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="116" y="75" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="116" y="90" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+
+  <!-- Arrow -->
+  <line x1="130" y1="82" x2="137" y2="82" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- "Spatial" label above dashed group -->
+  <text x="185" y="40" text-anchor="middle" font-size="8" fill="#6b7280" font-style="italic">Spatial</text>
+
+  <!-- Blue dashed group 1 (Spatial Mixing) -->
+  <rect x="138" y="48" width="96" height="68" rx="4" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- LayerNorm 1 -->
+  <rect x="143" y="55" width="17" height="50" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="151" y="82" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,151,82)">LayerNorm</text>
+  <!-- Arrow -->
+  <line x1="162" y1="82" x2="168" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- E_spatial -->
+  <rect x="170" y="55" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="178" y="82" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,178,82)">E_spatial</text>
+  <!-- Arrow -->
+  <line x1="189" y1="82" x2="195" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- MLP -->
+  <rect x="197" y="55" width="17" height="50" rx="2" fill="#2563eb" stroke="#1d4ed8" stroke-width="0.8"/>
+  <text x="205" y="82" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,205,82)">MLP</text>
+
+  <!-- Arrow out of spatial group -->
+  <line x1="216" y1="82" x2="222" y2="82" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Token stack B -->
+  <rect x="224" y="60" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="224" y="75" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="224" y="90" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+
+  <!-- Arrow -->
+  <line x1="238" y1="82" x2="247" y2="82" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Blue dashed group 2 (Channel Mixing) -->
+  <rect x="248" y="48" width="124" height="68" rx="4" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- LayerNorm 2 -->
+  <rect x="253" y="55" width="17" height="50" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="261" y="82" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,261,82)">LayerNorm</text>
+  <line x1="272" y1="82" x2="278" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- E_channel -->
+  <rect x="280" y="55" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="288" y="82" text-anchor="middle" font-size="6" fill="white" transform="rotate(-90,288,82)">E_channel</text>
+  <line x1="299" y1="82" x2="305" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- GELU -->
+  <rect x="307" y="55" width="17" height="50" rx="2" fill="#0ea5e9" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="315" y="82" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,315,82)">GELU</text>
+  <line x1="326" y1="82" x2="332" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- E_channel 2 -->
+  <rect x="334" y="55" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="342" y="82" text-anchor="middle" font-size="6" fill="white" transform="rotate(-90,342,82)">E_channel</text>
+  <line x1="353" y1="82" x2="359" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <!-- MLP -->
+  <rect x="361" y="55" width="17" height="50" rx="2" fill="#2563eb" stroke="#1d4ed8" stroke-width="0.8"/>
+  <text x="369" y="82" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,369,82)">MLP</text>
+
+  <!-- Arrow out + final tokens -->
+  <line x1="380" y1="82" x2="386" y2="82" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="388" y="60" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="388" y="75" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="388" y="90" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+
+  <!-- ──── ROW 2: High-Level Features (y_center=200) ──── -->
+
+  <!-- Token stack A -->
+  <rect x="116" y="178" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="116" y="193" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="116" y="208" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <line x1="130" y1="200" x2="137" y2="200" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Blue dashed group 1 -->
+  <rect x="138" y="166" width="96" height="68" rx="4" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="143" y="173" width="17" height="50" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="151" y="200" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,151,200)">LayerNorm</text>
+  <line x1="162" y1="200" x2="168" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="170" y="173" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="178" y="200" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,178,200)">E_spatial</text>
+  <line x1="189" y1="200" x2="195" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="197" y="173" width="17" height="50" rx="2" fill="#2563eb" stroke="#1d4ed8" stroke-width="0.8"/>
+  <text x="205" y="200" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,205,200)">MLP</text>
+  <line x1="216" y1="200" x2="222" y2="200" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Token stack B -->
+  <rect x="224" y="178" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="224" y="193" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="224" y="208" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <line x1="238" y1="200" x2="247" y2="200" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Blue dashed group 2 -->
+  <rect x="248" y="166" width="124" height="68" rx="4" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="253" y="173" width="17" height="50" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="0.8"/>
+  <text x="261" y="200" text-anchor="middle" font-size="6.5" fill="white" transform="rotate(-90,261,200)">LayerNorm</text>
+  <line x1="272" y1="200" x2="278" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="280" y="173" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="288" y="200" text-anchor="middle" font-size="6" fill="white" transform="rotate(-90,288,200)">E_channel</text>
+  <line x1="299" y1="200" x2="305" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="307" y="173" width="17" height="50" rx="2" fill="#0ea5e9" stroke="#0284c7" stroke-width="0.8"/>
+  <text x="315" y="200" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,315,200)">GELU</text>
+  <line x1="326" y1="200" x2="332" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="334" y="173" width="17" height="50" rx="2" fill="#0891b2" stroke="#0e7490" stroke-width="0.8"/>
+  <text x="342" y="200" text-anchor="middle" font-size="6" fill="white" transform="rotate(-90,342,200)">E_channel</text>
+  <line x1="353" y1="200" x2="359" y2="200" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="361" y="173" width="17" height="50" rx="2" fill="#2563eb" stroke="#1d4ed8" stroke-width="0.8"/>
+  <text x="369" y="200" text-anchor="middle" font-size="7" fill="white" transform="rotate(-90,369,200)">MLP</text>
+  <line x1="380" y1="200" x2="386" y2="200" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Token stack C -->
+  <rect x="388" y="178" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="388" y="193" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+  <rect x="388" y="208" width="12" height="12" rx="1" fill="#fdba74" stroke="#f97316" stroke-width="0.8"/>
+
+  <!-- ──── CONCAT + OUTPUT ──── -->
+  <!-- Arrows from both rows to concat -->
+  <line x1="402" y1="82" x2="430" y2="82" stroke="#475569" stroke-width="1.2"/>
+  <line x1="430" y1="82" x2="430" y2="130" stroke="#475569" stroke-width="1.2"/>
+  <line x1="402" y1="200" x2="430" y2="200" stroke="#475569" stroke-width="1.2"/>
+  <line x1="430" y1="200" x2="430" y2="150" stroke="#475569" stroke-width="1.2"/>
+
+  <!-- Concat circle -->
+  <circle cx="450" cy="140" r="16" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="450" y="144" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">C</text>
+
+  <!-- Arrow + Output -->
+  <line x1="466" y1="140" x2="490" y2="140" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="500" y="144" font-size="10" fill="#334155">Output</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PARGO (bottom section, orange dashed border)           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="105" y="295" width="430" height="230" rx="8" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- ── Learnable Queries (left side) ── -->
+
+  <!-- Partial tokens (green dashed circles) — top group -->
+  <circle cx="135" cy="340" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="135" cy="358" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="135" cy="376" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="155" cy="349" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="155" cy="367" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- Visual tokens (gray circles) — middle -->
+  <circle cx="135" cy="400" r="5" fill="#d1d5db" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="150" cy="400" r="5" fill="#d1d5db" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="165" cy="400" r="5" fill="#d1d5db" stroke="#9ca3af" stroke-width="0.8"/>
+
+  <!-- Partial tokens (green) — bottom group -->
+  <circle cx="135" cy="425" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="135" cy="443" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="155" cy="434" r="7" fill="#86efac" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- Global token (blue circle) -->
+  <circle cx="135" cy="470" r="7" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.2"/>
+
+  <!-- Connecting lines from queries to perception blocks -->
+  <line x1="165" y1="340" x2="230" y2="365" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="165" y1="358" x2="230" y2="375" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="165" y1="376" x2="230" y2="385" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="165" y1="425" x2="230" y2="410" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="165" y1="443" x2="230" y2="420" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="165" y1="470" x2="230" y2="440" stroke="#94a3b8" stroke-width="0.8"/>
+
+  <!-- ── Perception Blocks ── -->
+  <!-- Partial-Global Perception Block -->
+  <rect x="235" y="325" width="75" height="155" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="272" y="405" text-anchor="middle" font-size="8" font-weight="bold" fill="#1e40af" transform="rotate(-90,272,405)">Partial-Global Perception Block</text>
+
+  <!-- Arrow between blocks -->
+  <line x1="312" y1="405" x2="330" y2="405" stroke="#475569" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- Cascaded Partial Perception Block -->
+  <rect x="335" y="325" width="75" height="155" rx="5" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="372" y="405" text-anchor="middle" font-size="8" font-weight="bold" fill="#1e40af" transform="rotate(-90,372,405)">Cascaded Partial Perception Block</text>
+
+  <!-- Arrow → Output -->
+  <line x1="412" y1="405" x2="450" y2="405" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="458" y="409" font-size="10" fill="#334155">Output</text>
+
+  <!-- Bottom label -->
+  <text x="300" y="510" text-anchor="middle" font-size="9" fill="#6b7280" font-style="italic">Partial-Global Projection Layer × N Layers</text>
+
+  <!-- "ParGo" title below -->
+  <text x="300" y="535" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412" font-style="italic">ParGo</text>
+
+</svg>

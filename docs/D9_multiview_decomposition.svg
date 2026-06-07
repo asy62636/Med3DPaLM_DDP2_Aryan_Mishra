@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 580" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr"          markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#374151"/></marker>
+    <marker id="arr-axial"    markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1d4ed8"/></marker>
+    <marker id="arr-coronal"  markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/></marker>
+    <marker id="arr-sagittal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#15803d"/></marker>
+    <marker id="arr-fuse"     markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/></marker>
+  </defs>
+
+  <!-- ═══ TITLE ═══ -->
+  <text x="460" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a4f8a">Multi-View 3D Decomposition (inside each ParGo Branch)</text>
+
+  <!-- ═══ 3D CUBE (left, centered at y=285) ═══ -->
+  <polygon points="110,208 192,250 110,292 28,250" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <polygon points="28,250  110,292 110,374 28,332"  fill="#c7d2fe" stroke="#4338ca" stroke-width="2"/>
+  <polygon points="110,292 192,250 192,332 110,374" fill="#a5b4fc" stroke="#4338ca" stroke-width="2"/>
+  <!-- Slice dashes on left face -->
+  <line x1="28" y1="280" x2="110" y2="322" stroke="#4338ca" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+  <line x1="28" y1="310" x2="110" y2="352" stroke="#4338ca" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+  <!-- Slice dashes on top face -->
+  <line x1="55" y1="222"  x2="137" y2="264" stroke="#4338ca" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+  <line x1="82" y1="236"  x2="164" y2="278" stroke="#4338ca" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+  <!-- Cube labels -->
+  <text x="110" y="286" text-anchor="middle" font-size="13" font-weight="bold" fill="#312e81">D×H×W</text>
+  <text x="110" y="303" text-anchor="middle" font-size="12" fill="#4338ca">4×8×8</text>
+  <!-- Cube title below -->
+  <text x="110" y="400" text-anchor="middle" font-size="14" font-weight="bold" fill="#4338ca">3D Token Grid</text>
+  <text x="110" y="418" text-anchor="middle" font-size="12" fill="#6b7280">from encoder</text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!--  ROW 1: AXIAL  (depth-wise, y~65-190)       -->
+  <!-- ════════════════════════════════════════════ -->
+  <!-- Arrow from cube top-right to axial slices -->
+  <line x1="195" y1="254" x2="238" y2="110" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-axial)"/>
+  <!-- 4 stacked axial slices -->
+  <rect x="240" y="62"  width="100" height="22" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.5" rx="2"/>
+  <rect x="240" y="88"  width="100" height="22" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1.5" rx="2"/>
+  <rect x="240" y="114" width="100" height="22" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5" rx="2"/>
+  <rect x="240" y="140" width="100" height="22" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5" rx="2"/>
+  <!-- Axial labels -->
+  <text x="290" y="54"  text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">Axial</text>
+  <text x="290" y="180" text-anchor="middle" font-size="13" fill="#1d4ed8">D=4 slices  (depth)</text>
+  <text x="290" y="197" text-anchor="middle" font-size="12" fill="#6b7280" font-style="italic">lungs, kidneys</text>
+  <!-- Arrow to transformer -->
+  <line x1="342" y1="112" x2="390" y2="112" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-axial)"/>
+  <!-- Axial Transformer -->
+  <rect x="392" y="79" width="148" height="68" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="466" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">Transformer</text>
+  <text x="466" y="122" text-anchor="middle" font-size="13" fill="#374151">6 layers</text>
+  <text x="466" y="138" text-anchor="middle" font-size="12" fill="#6b7280">cross-attn</text>
+  <!-- Arrow to output -->
+  <line x1="542" y1="113" x2="588" y2="113" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arr-axial)"/>
+  <!-- Output token box -->
+  <rect x="590" y="93" width="120" height="42" rx="4" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="650" y="111" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">144 tokens</text>
+  <text x="650" y="127" text-anchor="middle" font-size="12" fill="#374151">× 384D</text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!--  ROW 2: CORONAL  (front-back, y~255-400)    -->
+  <!-- ════════════════════════════════════════════ -->
+  <line x1="193" y1="285" x2="238" y2="285" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-coronal)"/>
+  <!-- 4 coronal slices (vertical strips) -->
+  <rect x="240" y="255" width="22" height="68" fill="#fecaca" stroke="#dc2626" stroke-width="1.5" rx="2"/>
+  <rect x="266" y="255" width="22" height="68" fill="#fca5a5" stroke="#dc2626" stroke-width="1.5" rx="2"/>
+  <rect x="292" y="255" width="22" height="68" fill="#f87171" stroke="#dc2626" stroke-width="1.5" rx="2"/>
+  <rect x="318" y="255" width="22" height="68" fill="#ef4444" stroke="#dc2626" stroke-width="1.5" rx="2"/>
+  <!-- Coronal labels -->
+  <text x="290" y="247" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">Coronal</text>
+  <text x="290" y="340" text-anchor="middle" font-size="13" fill="#dc2626">H=8 slices  (front-back)</text>
+  <text x="290" y="357" text-anchor="middle" font-size="12" fill="#6b7280" font-style="italic">aorta, liver</text>
+  <!-- Arrow to transformer -->
+  <line x1="344" y1="289" x2="390" y2="289" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-coronal)"/>
+  <!-- Coronal Transformer -->
+  <rect x="392" y="256" width="148" height="68" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="466" y="281" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">Transformer</text>
+  <text x="466" y="299" text-anchor="middle" font-size="13" fill="#374151">6 layers</text>
+  <text x="466" y="315" text-anchor="middle" font-size="12" fill="#6b7280">cross-attn</text>
+  <!-- Arrow to output -->
+  <line x1="542" y1="290" x2="588" y2="290" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-coronal)"/>
+  <!-- Output -->
+  <rect x="590" y="270" width="120" height="42" rx="4" fill="#fecaca" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="650" y="288" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">144 tokens</text>
+  <text x="650" y="304" text-anchor="middle" font-size="12" fill="#374151">× 384D</text>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!--  ROW 3: SAGITTAL (left-right, y~425-540)    -->
+  <!-- ════════════════════════════════════════════ -->
+  <line x1="192" y1="320" x2="238" y2="455" stroke="#15803d" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-sagittal)"/>
+  <!-- 4 sagittal slices (parallelograms) -->
+  <polygon points="240,432 270,416 270,484 240,500" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5"/>
+  <polygon points="274,422 304,406 304,474 274,490" fill="#86efac" stroke="#15803d" stroke-width="1.5"/>
+  <polygon points="308,412 338,396 338,464 308,480" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+  <polygon points="342,402 372,386 372,454 342,470" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+  <!-- Sagittal labels -->
+  <text x="306" y="380" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803d">Sagittal</text>
+  <text x="306" y="512" text-anchor="middle" font-size="13" fill="#15803d">W=8 slices  (left-right)</text>
+  <text x="306" y="529" text-anchor="middle" font-size="12" fill="#6b7280" font-style="italic">spine, brain stem</text>
+  <!-- Arrow to transformer -->
+  <line x1="374" y1="450" x2="390" y2="450" stroke="#15803d" stroke-width="2" marker-end="url(#arr-sagittal)"/>
+  <!-- Sagittal Transformer -->
+  <rect x="392" y="432" width="148" height="68" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="466" y="457" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">Transformer</text>
+  <text x="466" y="475" text-anchor="middle" font-size="13" fill="#374151">6 layers</text>
+  <text x="466" y="491" text-anchor="middle" font-size="12" fill="#6b7280">cross-attn</text>
+  <!-- Arrow to output -->
+  <line x1="542" y1="466" x2="588" y2="466" stroke="#15803d" stroke-width="2" marker-end="url(#arr-sagittal)"/>
+  <!-- Output -->
+  <rect x="590" y="446" width="120" height="42" rx="4" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5"/>
+  <text x="650" y="464" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">144 tokens</text>
+  <text x="650" y="480" text-anchor="middle" font-size="12" fill="#374151">× 384D</text>
+
+  <!-- ═══ FUSION ARROWS & BOX ═══ -->
+  <line x1="712" y1="114" x2="756" y2="252" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr-fuse)"/>
+  <line x1="712" y1="291" x2="756" y2="291" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr-fuse)"/>
+  <line x1="712" y1="467" x2="756" y2="330" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr-fuse)"/>
+
+  <!-- Fusion box -->
+  <rect x="758" y="224" width="148" height="140" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="832" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#7c3aed">Adaptive</text>
+  <text x="832" y="268" text-anchor="middle" font-size="15" font-weight="bold" fill="#7c3aed">Fusion</text>
+  <text x="832" y="292" text-anchor="middle" font-size="13" fill="#4c1d95">α₁ · Axial</text>
+  <text x="832" y="310" text-anchor="middle" font-size="13" fill="#4c1d95">+ α₂ · Coronal</text>
+  <text x="832" y="328" text-anchor="middle" font-size="13" fill="#4c1d95">+ α₃ · Sagittal</text>
+  <text x="832" y="350" text-anchor="middle" font-size="11" fill="#6b7280">softmax(α₁,α₂,α₃)=1</text>
+
+  <!-- Output arrow -->
+  <line x1="832" y1="365" x2="832" y2="400" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr-fuse)"/>
+
+  <!-- Output box -->
+  <rect x="758" y="402" width="148" height="54" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="832" y="424" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c3aed">Fused Output</text>
+  <text x="832" y="442" text-anchor="middle" font-size="12" fill="#374151">144 tokens × 384D</text>
+
+  <!-- Learned weights note -->
+  <rect x="758" y="464" width="148" height="52" rx="5" fill="#faf5ff" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="832" y="481" text-anchor="middle" font-size="12" fill="#6b7280">Typical learned values:</text>
+  <text x="832" y="498" text-anchor="middle" font-size="13" fill="#7c3aed">α₁ ≈ α₂ ≈ α₃ ≈ 0.33</text>
+  <text x="832" y="512" text-anchor="middle" font-size="11" fill="#6b7280">all views contribute equally</text>
+</svg>

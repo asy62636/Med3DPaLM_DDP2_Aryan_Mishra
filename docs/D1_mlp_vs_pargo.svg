@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 590" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#15803d"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7c3aed"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ca8a04"/>
+    </marker>
+  </defs>
+
+  <!-- ═══ TOP PANEL: MLP-Mixer ═══ -->
+  <rect x="10" y="8" width="520" height="278" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="270" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#64748b">MLP-Mixer Projector</text>
+  <text x="270" y="54" text-anchor="middle" font-size="11" fill="#94a3b8">(Med3DVLM — current baseline)</text>
+
+  <text x="270" y="70" text-anchor="middle" font-size="10" fill="#6b7280">Visual tokens from encoder</text>
+
+  <!-- 8 gray input tokens: total width=8×30+7×4=268, center at 270, start=136 -->
+  <rect x="136" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="170" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="204" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="238" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="272" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="306" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="340" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="374" y="75" width="30" height="30" fill="#94a3b8" rx="3"/>
+
+  <line x1="270" y1="107" x2="270" y2="130" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="100" y="132" width="340" height="52" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+  <text x="270" y="154" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">MLP-Mixer</text>
+  <text x="270" y="172" text-anchor="middle" font-size="10" fill="#64748b">768D → 3584D  |  ~10M params  |  all tokens identical processing</text>
+
+  <line x1="270" y1="186" x2="270" y2="206" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- 8 gray output tokens (identical = spatial structure lost) -->
+  <rect x="136" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="170" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="204" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="238" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="272" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="306" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="340" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+  <rect x="374" y="208" width="30" height="30" fill="#94a3b8" rx="3"/>
+
+  <!-- Limitations banner -->
+  <rect x="100" y="248" width="340" height="32" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="270" y="261" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">✗ Uniform processing — no spatial or 3D awareness</text>
+  <text x="270" y="275" text-anchor="middle" font-size="10" fill="#374151">Single-scale  |  No attention  |  Fixed receptive field</text>
+
+  <!-- ═══ VS BADGE ═══ -->
+  <circle cx="270" cy="302" r="19" fill="#1a4f8a"/>
+  <text x="270" y="308" text-anchor="middle" font-size="14" font-weight="bold" fill="white">vs</text>
+
+  <!-- ═══ BOTTOM PANEL: ParGo ═══ -->
+  <rect x="10" y="320" width="520" height="262" rx="12" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+
+  <text x="270" y="348" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803d">ParGo Projector</text>
+  <text x="270" y="366" text-anchor="middle" font-size="11" fill="#6b7280">(our proposal — query-based cross-attention)</text>
+
+  <text x="270" y="381" text-anchor="middle" font-size="10" fill="#6b7280">Visual tokens (colours = spatial regions)</text>
+
+  <!-- 8 colored input tokens -->
+  <rect x="136" y="386" width="30" height="30" fill="#93c5fd" rx="3"/>
+  <rect x="170" y="386" width="30" height="30" fill="#93c5fd" rx="3"/>
+  <rect x="204" y="386" width="30" height="30" fill="#86efac" rx="3"/>
+  <rect x="238" y="386" width="30" height="30" fill="#86efac" rx="3"/>
+  <rect x="272" y="386" width="30" height="30" fill="#fde68a" rx="3"/>
+  <rect x="306" y="386" width="30" height="30" fill="#fde68a" rx="3"/>
+  <rect x="340" y="386" width="30" height="30" fill="#fca5a5" rx="3"/>
+  <rect x="374" y="386" width="30" height="30" fill="#fca5a5" rx="3"/>
+
+  <!-- Global Query circle (right) — attends ALL tokens -->
+  <circle cx="506" cy="403" r="21" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="506" y="398" text-anchor="middle" font-size="9" font-weight="bold" fill="#7c3aed">Global</text>
+  <text x="506" y="410" text-anchor="middle" font-size="9" fill="#6d28d9">Query</text>
+  <line x1="485" y1="397" x2="406" y2="401" stroke="#7c3aed" stroke-width="1" opacity="0.55" stroke-dasharray="3,2" marker-end="url(#arr-purple)"/>
+  <line x1="485" y1="402" x2="372" y2="401" stroke="#7c3aed" stroke-width="1" opacity="0.5"  stroke-dasharray="3,2" marker-end="url(#arr-purple)"/>
+  <line x1="485" y1="406" x2="270" y2="401" stroke="#7c3aed" stroke-width="1" opacity="0.38" stroke-dasharray="3,2" marker-end="url(#arr-purple)"/>
+  <line x1="484" y1="410" x2="168" y2="401" stroke="#7c3aed" stroke-width="1" opacity="0.28" stroke-dasharray="3,2" marker-end="url(#arr-purple)"/>
+
+  <!-- Local Query circle (left) — attends NEARBY tokens only -->
+  <circle cx="44" cy="403" r="19" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="44" y="398" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Local</text>
+  <text x="44" y="410" text-anchor="middle" font-size="9" fill="#92400e">Query</text>
+  <line x1="63" y1="397" x2="134" y2="397" stroke="#ca8a04" stroke-width="1.5" opacity="0.9" stroke-dasharray="3,2" marker-end="url(#arr-amber)"/>
+  <line x1="63" y1="406" x2="168" y2="401" stroke="#ca8a04" stroke-width="1.5" opacity="0.9" stroke-dasharray="3,2" marker-end="url(#arr-amber)"/>
+
+  <text x="270" y="438" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">↓  global attends ALL  |  local attends NEARBY only  ↓</text>
+
+  <!-- 6-Layer Transformer box -->
+  <rect x="100" y="446" width="340" height="50" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="270" y="468" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">6-Layer Transformer</text>
+  <text x="270" y="485" text-anchor="middle" font-size="10" fill="#374151">Self-Attn(Q,Q) → Cross-Attn(Q, tokens) → FFN  ×6</text>
+
+  <line x1="270" y1="498" x2="270" y2="518" stroke="#15803d" stroke-width="2.5" marker-end="url(#arr-green)"/>
+
+  <!-- 8 colored output tokens (spatial structure preserved) -->
+  <rect x="136" y="521" width="30" height="26" fill="#93c5fd" rx="3"/>
+  <rect x="170" y="521" width="30" height="26" fill="#93c5fd" rx="3"/>
+  <rect x="204" y="521" width="30" height="26" fill="#86efac" rx="3"/>
+  <rect x="238" y="521" width="30" height="26" fill="#86efac" rx="3"/>
+  <rect x="272" y="521" width="30" height="26" fill="#fde68a" rx="3"/>
+  <rect x="306" y="521" width="30" height="26" fill="#fde68a" rx="3"/>
+  <rect x="340" y="521" width="30" height="26" fill="#fca5a5" rx="3"/>
+  <rect x="374" y="521" width="30" height="26" fill="#fca5a5" rx="3"/>
+
+  <!-- Advantages banner -->
+  <rect x="100" y="554" width="340" height="24" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="270" y="568" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">✓ Spatially-aware  |  Global + local attention  |  3D-extensible</text>
+</svg>

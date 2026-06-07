@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#475569"/>
+    </marker>
+    <marker id="ar-g" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TOP: Partial-Global Attention Mask          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="180" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#1f2937">Partial-Global Attention Mask</text>
+
+  <!-- ── Global Attention ── -->
+  <text x="50" y="35" text-anchor="middle" font-size="8" fill="#4b5563" font-style="italic">Global Attention</text>
+
+  <!-- Global query token (blue) -->
+  <circle cx="18" cy="55" r="7" fill="#93c5fd" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="18" y="58" text-anchor="middle" font-size="5.5" font-weight="bold" fill="#1d4ed8">G</text>
+
+  <!-- Visual tokens row for global -->
+  <circle cx="60" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="78" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="96" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="114" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="132" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="150" cy="55" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+
+  <!-- Lines from global token to ALL visual tokens -->
+  <line x1="25" y1="55" x2="55" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+  <line x1="25" y1="55" x2="73" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+  <line x1="25" y1="55" x2="91" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+  <line x1="25" y1="55" x2="109" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+  <line x1="25" y1="55" x2="127" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+  <line x1="25" y1="55" x2="145" y2="55" stroke="#3b82f6" stroke-width="0.7" opacity="0.6"/>
+
+  <!-- ── Partial Attention ── -->
+  <text x="50" y="80" text-anchor="middle" font-size="8" fill="#4b5563" font-style="italic">Partial Attention</text>
+
+  <!-- "Divide into groups" annotation -->
+  <text x="105" y="82" font-size="6" fill="#6b7280" font-style="italic">← Divide into groups →</text>
+
+  <!-- Partial query group 1 (green) -->
+  <circle cx="18" cy="100" r="6" fill="#86efac" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="18" y="103" text-anchor="middle" font-size="5" font-weight="bold" fill="#166534">P₁</text>
+  <circle cx="18" cy="118" r="6" fill="#86efac" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="18" y="121" text-anchor="middle" font-size="5" font-weight="bold" fill="#166534">P₂</text>
+
+  <!-- Visual tokens group 1 -->
+  <circle cx="60" cy="109" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="78" cy="109" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="96" cy="109" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+
+  <!-- Lines from P1,P2 to group 1 visual tokens -->
+  <line x1="24" y1="100" x2="55" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="100" x2="73" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="100" x2="91" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="118" x2="55" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="118" x2="73" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="118" x2="91" y2="109" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+
+  <!-- Partial query group 2 (green) -->
+  <circle cx="18" cy="140" r="6" fill="#86efac" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="18" y="143" text-anchor="middle" font-size="5" font-weight="bold" fill="#166534">P₃</text>
+  <circle cx="18" cy="158" r="6" fill="#86efac" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="18" y="161" text-anchor="middle" font-size="5" font-weight="bold" fill="#166534">P₄</text>
+
+  <!-- Visual tokens group 2 -->
+  <circle cx="114" cy="149" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="132" cy="149" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+  <circle cx="150" cy="149" r="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.8"/>
+
+  <!-- Lines from P3,P4 to group 2 visual tokens -->
+  <line x1="24" y1="140" x2="109" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="140" x2="127" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="140" x2="145" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="158" x2="109" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="158" x2="127" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+  <line x1="24" y1="158" x2="145" y2="149" stroke="#22c55e" stroke-width="0.7" opacity="0.6"/>
+
+  <!-- Group divider (dashed line between groups) -->
+  <line x1="104" y1="90" x2="104" y2="168" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- ── Attention Mask Grid (right side) ── -->
+  <text x="385" y="30" text-anchor="middle" font-size="8" font-weight="bold" fill="#4b5563">Attention Mask</text>
+
+  <!-- Grid origin at x=310, y=38 -->
+  <!-- Each cell: 14×14 -->
+  <!-- 6 columns (visual tokens) × 6 rows (4 partial + 2 global) -->
+
+  <!-- Column labels (visual tokens) -->
+  <text x="324" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₁</text>
+  <text x="338" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₂</text>
+  <text x="352" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₃</text>
+  <text x="366" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₄</text>
+  <text x="380" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₅</text>
+  <text x="394" y="47" text-anchor="middle" font-size="5" fill="#6b7280">v₆</text>
+
+  <!-- Row labels -->
+  <text x="310" y="62" text-anchor="end" font-size="5" fill="#166534">P₁</text>
+  <text x="310" y="76" text-anchor="end" font-size="5" fill="#166534">P₂</text>
+  <text x="310" y="90" text-anchor="end" font-size="5" fill="#166534">P₃</text>
+  <text x="310" y="104" text-anchor="end" font-size="5" fill="#166534">P₄</text>
+  <text x="310" y="118" text-anchor="end" font-size="5" fill="#1d4ed8">G₁</text>
+  <text x="310" y="132" text-anchor="end" font-size="5" fill="#1d4ed8">G₂</text>
+
+  <!-- Row 1 (P1): v1,v2,v3 = unmasked; v4,v5,v6 = masked -->
+  <rect x="317" y="52" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="331" y="52" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="345" y="52" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="359" y="52" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="373" y="52" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="387" y="52" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Row 2 (P2): same as P1 -->
+  <rect x="317" y="66" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="331" y="66" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="345" y="66" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="359" y="66" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="373" y="66" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="387" y="66" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Row 3 (P3): v1,v2,v3 = masked; v4,v5,v6 = unmasked -->
+  <rect x="317" y="80" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="331" y="80" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="345" y="80" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="359" y="80" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="373" y="80" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="387" y="80" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+
+  <!-- Row 4 (P4): same as P3 -->
+  <rect x="317" y="94" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="331" y="94" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="345" y="94" width="14" height="14" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <rect x="359" y="94" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="373" y="94" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <rect x="387" y="94" width="14" height="14" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+
+  <!-- Row 5 (G1): ALL unmasked (global attention) -->
+  <rect x="317" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="331" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="345" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="359" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="373" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="387" y="108" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+
+  <!-- Row 6 (G2): ALL unmasked -->
+  <rect x="317" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="331" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="345" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="359" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="373" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="387" y="122" width="14" height="14" rx="1" fill="white" stroke="#3b82f6" stroke-width="1"/>
+
+  <!-- Braces/labels for partial vs global rows -->
+  <text x="414" y="82" font-size="6" fill="#166534" font-style="italic">Partial</text>
+  <text x="414" y="124" font-size="6" fill="#1d4ed8" font-style="italic">Global</text>
+
+  <!-- Grid border -->
+  <rect x="315" y="50" width="90" height="90" fill="none" stroke="#94a3b8" stroke-width="0.8"/>
+  <line x1="315" y1="107" x2="405" y2="107" stroke="#64748b" stroke-width="0.6" stroke-dasharray="3,2"/>
+
+  <!-- Unmasked/Masked labels -->
+  <rect x="420" y="55" width="10" height="10" rx="1" fill="white" stroke="#22c55e" stroke-width="1"/>
+  <text x="435" y="63" font-size="5.5" fill="#4b5563">Unmasked</text>
+  <rect x="420" y="72" width="10" height="10" rx="1" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="435" y="80" font-size="5.5" fill="#4b5563">Masked</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Divider line                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <line x1="10" y1="178" x2="510" y2="178" stroke="#d1d5db" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM: Cascaded Partial Attention Mask     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="200" y="195" text-anchor="middle" font-size="10" font-weight="bold" fill="#1f2937">Cascaded Partial Attention Mask</text>
+
+  <!-- Layer 1: One-to-one (each partial token sees 1 visual token) -->
+  <text x="10" y="220" font-size="7" fill="#4b5563">Layer 1:</text>
+
+  <!-- Partial tokens (green) — each connected to ONE visual token -->
+  <circle cx="65" cy="217" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="110" cy="217" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="155" cy="217" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="200" cy="217" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+
+  <!-- Visual tokens below each partial (gray, smaller) -->
+  <circle cx="65" cy="233" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="110" cy="233" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="155" cy="233" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="200" cy="233" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+
+  <!-- Lines -->
+  <line x1="65" y1="223" x2="65" y2="229" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="110" y1="223" x2="110" y2="229" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="155" y1="223" x2="155" y2="229" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="200" y1="223" x2="200" y2="229" stroke="#22c55e" stroke-width="0.8"/>
+
+  <!-- Label -->
+  <text x="240" y="226" font-size="7" fill="#6b7280" font-style="italic">One-to-one</text>
+
+  <!-- Green arrow down (deeper layer) -->
+  <line x1="132" y1="240" x2="132" y2="252" stroke="#16a34a" stroke-width="1.2" marker-end="url(#ar-g)"/>
+
+  <!-- Layer 2: One-to-two (each partial token sees 2 visual tokens) -->
+  <text x="10" y="268" font-size="7" fill="#4b5563">Layer 2:</text>
+
+  <!-- Partial tokens -->
+  <circle cx="65" cy="265" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="110" cy="265" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="155" cy="265" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="200" cy="265" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+
+  <!-- Visual tokens (now 2 per partial token, shared) -->
+  <circle cx="65" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="88" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="110" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="133" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="155" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="178" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="200" cy="281" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+
+  <!-- Lines (each partial sees 2 neighbors) -->
+  <line x1="65" y1="271" x2="65" y2="277" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="65" y1="271" x2="88" y2="277" stroke="#22c55e" stroke-width="0.6" opacity="0.6"/>
+  <line x1="110" y1="271" x2="110" y2="277" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="110" y1="271" x2="133" y2="277" stroke="#22c55e" stroke-width="0.6" opacity="0.6"/>
+  <line x1="155" y1="271" x2="155" y2="277" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="155" y1="271" x2="178" y2="277" stroke="#22c55e" stroke-width="0.6" opacity="0.6"/>
+  <line x1="200" y1="271" x2="200" y2="277" stroke="#22c55e" stroke-width="0.8"/>
+
+  <!-- Label -->
+  <text x="240" y="274" font-size="7" fill="#6b7280" font-style="italic">One-to-two</text>
+
+  <!-- Green arrow down -->
+  <line x1="132" y1="288" x2="132" y2="298" stroke="#16a34a" stroke-width="1.2" marker-end="url(#ar-g)"/>
+
+  <!-- Layer N: One-to-all (each partial token sees ALL visual tokens) -->
+  <text x="10" y="316" font-size="7" fill="#4b5563">Layer N:</text>
+
+  <!-- Partial tokens -->
+  <circle cx="65" cy="313" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="110" cy="313" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="155" cy="313" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="200" cy="313" r="5.5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+
+  <!-- Visual tokens (all shared) -->
+  <circle cx="65" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="88" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="110" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="133" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="155" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="178" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <circle cx="200" cy="329" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+
+  <!-- Lines (each partial sees ALL visual tokens — fan out) -->
+  <line x1="65" y1="319" x2="65" y2="325" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="65" y1="319" x2="88" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="65" y1="319" x2="110" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="65" y1="319" x2="133" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="110" y1="319" x2="65" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="110" y1="319" x2="88" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="110" y1="319" x2="110" y2="325" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="110" y1="319" x2="133" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="110" y1="319" x2="155" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="155" y1="319" x2="110" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="155" y1="319" x2="133" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="155" y1="319" x2="155" y2="325" stroke="#22c55e" stroke-width="0.8"/>
+  <line x1="155" y1="319" x2="178" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="155" y1="319" x2="200" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="319" x2="155" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="319" x2="178" y2="325" stroke="#22c55e" stroke-width="0.5" opacity="0.4"/>
+  <line x1="200" y1="319" x2="200" y2="325" stroke="#22c55e" stroke-width="0.8"/>
+
+  <!-- Label -->
+  <text x="240" y="322" font-size="7" fill="#6b7280" font-style="italic">One-to-all</text>
+
+  <!-- "Deeper Layer" annotation on right -->
+  <text x="290" y="260" font-size="7" fill="#16a34a" font-weight="bold" transform="rotate(90,290,260)">Deeper Layers →</text>
+
+  <!-- ═══ LEGEND (bottom) ═══ -->
+  <circle cx="340" cy="210" r="5" fill="#86efac" stroke="#22c55e" stroke-width="1"/>
+  <text x="350" y="213" font-size="6" fill="#4b5563">Partial Token</text>
+  <circle cx="340" cy="228" r="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="350" y="231" font-size="6" fill="#4b5563">Global Token</text>
+  <circle cx="340" cy="246" r="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.7"/>
+  <text x="350" y="249" font-size="6" fill="#4b5563">Visual Token</text>
+
+</svg>

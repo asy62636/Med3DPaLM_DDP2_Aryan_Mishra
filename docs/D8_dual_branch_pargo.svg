@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <marker id="arr-s" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto">
+      <polygon points="0 0, 6 2.5, 0 5" fill="#22c55e"/>
+    </marker>
+  </defs>
+
+  <!-- ═══════════ INPUT LABELS (from DCFormer) ═══════════ -->
+  <!-- S3 (low-level) -->
+  <rect x="25" y="2" width="180" height="28" rx="4" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="115" y="14" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1d4ed8">S3: 256t × 384D</text>
+  <text x="115" y="26" text-anchor="middle" font-size="7.5" fill="#3b82f6">(low-level features)</text>
+
+  <!-- S4 (high-level) -->
+  <rect x="275" y="2" width="180" height="28" rx="4" fill="#93c5fd" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="365" y="14" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1d4ed8">S4: 32t × 768D</text>
+  <text x="365" y="26" text-anchor="middle" font-size="7.5" fill="#2563eb">(high-level features)</text>
+
+  <!-- Arrows: inputs → branches -->
+  <line x1="115" y1="30" x2="115" y2="52" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="365" y1="30" x2="365" y2="52" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ═══════════ LEFT BRANCH: Low-Level ═══════════ -->
+  <rect x="8" y="55" width="222" height="212" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="119" y="74" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">Low-Level Branch</text>
+  <text x="119" y="88" text-anchor="middle" font-size="8" fill="#166534" font-style="italic">🔥 ~451M params</text>
+
+  <!-- L: Sub-box 1 — Pos Embed + Input Projection -->
+  <rect x="20" y="96" width="198" height="28" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="119" y="108" text-anchor="middle" font-size="9" fill="#166534">+3D Sinusoidal Pos Embed</text>
+  <text x="119" y="120" text-anchor="middle" font-size="8.5" fill="#15803d">Input Proj: 384 → 768</text>
+
+  <!-- L: Arrow 1→2 -->
+  <line x1="119" y1="125" x2="119" y2="133" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arr-s)"/>
+
+  <!-- L: Sub-box 2 — 3-View ParGo (emphasized) -->
+  <rect x="20" y="135" width="198" height="48" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="119" y="149" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">3-View × 6L ParGo</text>
+  <!-- 3-view mini icons (centered) -->
+  <rect x="73" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="87" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Ax</text>
+  <rect x="105" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="119" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Cor</text>
+  <rect x="137" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="151" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Sag</text>
+  <text x="119" y="179" text-anchor="middle" font-size="8" fill="#166534">136 partial + 8 global queries</text>
+
+  <!-- L: Arrow 2→3 -->
+  <line x1="119" y1="184" x2="119" y2="192" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arr-s)"/>
+
+  <!-- L: Sub-box 3 — Fusion + Output -->
+  <rect x="20" y="194" width="198" height="28" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="119" y="206" text-anchor="middle" font-size="9" fill="#166534">Fusion → Output Proj</text>
+  <text x="119" y="218" text-anchor="middle" font-size="8" fill="#15803d">768 → 3584D + RMS Norm</text>
+
+  <!-- L: Output dimension label -->
+  <text x="119" y="242" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">↓ 144t × 3584D</text>
+
+  <!-- ═══════════ RIGHT BRANCH: High-Level ═══════════ -->
+  <rect x="250" y="55" width="222" height="212" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="361" y="74" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">High-Level Branch</text>
+  <text x="361" y="88" text-anchor="middle" font-size="8" fill="#166534" font-style="italic">🔥 ~258M params</text>
+
+  <!-- R: Sub-box 1 — Pos Embed + Input Projection -->
+  <rect x="262" y="96" width="198" height="28" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="361" y="108" text-anchor="middle" font-size="9" fill="#166534">+3D Sinusoidal Pos Embed</text>
+  <text x="361" y="120" text-anchor="middle" font-size="8.5" fill="#15803d">Input Proj: 768 → 768</text>
+
+  <!-- R: Arrow 1→2 -->
+  <line x1="361" y1="125" x2="361" y2="133" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arr-s)"/>
+
+  <!-- R: Sub-box 2 — 3-View ParGo (emphasized) -->
+  <rect x="262" y="135" width="198" height="48" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="361" y="149" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">3-View × 6L ParGo</text>
+  <!-- 3-view mini icons (centered) -->
+  <rect x="315" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="329" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Ax</text>
+  <rect x="347" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="361" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Cor</text>
+  <rect x="379" y="155" width="28" height="13" rx="2" fill="#86efac" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="393" y="165" text-anchor="middle" font-size="6.5" fill="#14532d">Sag</text>
+  <text x="361" y="179" text-anchor="middle" font-size="8" fill="#166534">28 partial + 4 global queries</text>
+
+  <!-- R: Arrow 2→3 -->
+  <line x1="361" y1="184" x2="361" y2="192" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arr-s)"/>
+
+  <!-- R: Sub-box 3 — Fusion + Output -->
+  <rect x="262" y="194" width="198" height="28" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="361" y="206" text-anchor="middle" font-size="9" fill="#166534">Fusion → Output Proj</text>
+  <text x="361" y="218" text-anchor="middle" font-size="8" fill="#15803d">768 → 3584D + RMS Norm</text>
+
+  <!-- R: Output dimension label -->
+  <text x="361" y="242" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">↓ 32t × 3584D</text>
+
+  <!-- ═══════════ MERGE LINES ═══════════ -->
+  <line x1="119" y1="267" x2="200" y2="295" stroke="#475569" stroke-width="1.8"/>
+  <line x1="361" y1="267" x2="280" y2="295" stroke="#475569" stroke-width="1.8"/>
+
+  <!-- ═══════════ CONCAT BAR ═══════════ -->
+  <rect x="105" y="297" width="270" height="26" rx="5" fill="#86efac" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="240" y="314" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">Concat → 176 tokens × 3584D</text>
+
+  <!-- Arrow to LLM -->
+  <line x1="240" y1="323" x2="240" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- LLM output label -->
+  <text x="240" y="355" text-anchor="middle" font-size="10" font-weight="bold" fill="#1f2937">→ Qwen 2.5-7B LLM</text>
+
+</svg>
